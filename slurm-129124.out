@@ -1,0 +1,94 @@
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: rllib in /home/paganinik/.local/lib/python3.6/site-packages (0.0.1)
+Requirement already satisfied: ray in /home/paganinik/.local/lib/python3.6/site-packages (2.4.0)
+Requirement already satisfied: gymnasium in /home/paganinik/.local/lib/python3.6/site-packages (0.26.3)
+Collecting dm_tree
+  Downloading dm-tree-0.1.8.tar.gz (35 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting pyboy
+  Downloading pyboy-1.4.7-cp36-cp36m-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (24.3 MB)
+Requirement already satisfied: virtualenv<20.21.1,>=20.0.24 in /home/paganinik/.local/lib/python3.6/site-packages (from ray) (20.17.1)
+Requirement already satisfied: attrs in /opt/conda/lib/python3.6/site-packages (from ray) (20.2.0)
+Requirement already satisfied: msgpack<2.0.0,>=1.0.0 in /home/paganinik/.local/lib/python3.6/site-packages (from ray) (1.0.5)
+Requirement already satisfied: filelock in /home/paganinik/.local/lib/python3.6/site-packages (from ray) (3.4.1)
+Requirement already satisfied: dataclasses in /home/paganinik/.local/lib/python3.6/site-packages (from ray) (0.8)
+Requirement already satisfied: jsonschema in /opt/conda/lib/python3.6/site-packages (from ray) (3.0.2)
+Requirement already satisfied: requests in /opt/conda/lib/python3.6/site-packages (from ray) (2.24.0)
+Requirement already satisfied: aiosignal in /home/paganinik/.local/lib/python3.6/site-packages (from ray) (1.2.0)
+Requirement already satisfied: protobuf!=3.19.5,>=3.15.3 in /home/paganinik/.local/lib/python3.6/site-packages (from ray) (3.19.6)
+Requirement already satisfied: typing-extensions in /opt/conda/lib/python3.6/site-packages (from ray) (3.7.4.3)
+Requirement already satisfied: numpy>=1.16 in /opt/conda/lib/python3.6/site-packages (from ray) (1.19.2)
+Requirement already satisfied: click>=7.0 in /opt/conda/lib/python3.6/site-packages (from ray) (7.1.2)
+Requirement already satisfied: grpcio<=1.51.3,>=1.32.0 in /opt/conda/lib/python3.6/site-packages (from ray) (1.33.2)
+Requirement already satisfied: pyyaml in /opt/conda/lib/python3.6/site-packages (from ray) (5.3.1)
+Requirement already satisfied: frozenlist in /home/paganinik/.local/lib/python3.6/site-packages (from ray) (1.2.0)
+Requirement already satisfied: importlib-metadata>=4.8.0 in /home/paganinik/.local/lib/python3.6/site-packages (from gymnasium) (4.8.3)
+Requirement already satisfied: cloudpickle>=1.2.0 in /home/paganinik/.local/lib/python3.6/site-packages (from gymnasium) (2.2.1)
+Requirement already satisfied: gymnasium-notices>=0.0.1 in /home/paganinik/.local/lib/python3.6/site-packages (from gymnasium) (0.0.1)
+Collecting numpy>=1.16
+  Downloading numpy-1.19.0-cp36-cp36m-manylinux2010_x86_64.whl (14.6 MB)
+Requirement already satisfied: pillow in /home/paganinik/.local/lib/python3.6/site-packages (from pyboy) (8.4.0)
+Collecting pysdl2
+  Downloading PySDL2-0.9.16.tar.gz (773 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting cython>=0.29.16
+  Downloading Cython-3.0.6-cp36-cp36m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.5 MB)
+Requirement already satisfied: six>=1.5.2 in /opt/conda/lib/python3.6/site-packages (from grpcio<=1.51.3,>=1.32.0->ray) (1.15.0)
+Requirement already satisfied: zipp>=0.5 in /opt/conda/lib/python3.6/site-packages (from importlib-metadata>=4.8.0->gymnasium) (3.4.0)
+Requirement already satisfied: platformdirs<3,>=2.4 in /home/paganinik/.local/lib/python3.6/site-packages (from virtualenv<20.21.1,>=20.0.24->ray) (2.4.0)
+Requirement already satisfied: importlib-resources>=5.4 in /home/paganinik/.local/lib/python3.6/site-packages (from virtualenv<20.21.1,>=20.0.24->ray) (5.4.0)
+Requirement already satisfied: distlib<1,>=0.3.6 in /home/paganinik/.local/lib/python3.6/site-packages (from virtualenv<20.21.1,>=20.0.24->ray) (0.3.7)
+Requirement already satisfied: pyrsistent>=0.14.0 in /opt/conda/lib/python3.6/site-packages (from jsonschema->ray) (0.17.3)
+Requirement already satisfied: setuptools in /opt/conda/lib/python3.6/site-packages (from jsonschema->ray) (59.6.0)
+Requirement already satisfied: certifi>=2017.4.17 in /opt/conda/lib/python3.6/site-packages (from requests->ray) (2020.6.20)
+Requirement already satisfied: idna<3,>=2.5 in /opt/conda/lib/python3.6/site-packages (from requests->ray) (2.9)
+Requirement already satisfied: urllib3!=1.25.0,!=1.25.1,<1.26,>=1.21.1 in /opt/conda/lib/python3.6/site-packages (from requests->ray) (1.25.11)
+Requirement already satisfied: chardet<4,>=3.0.2 in /opt/conda/lib/python3.6/site-packages (from requests->ray) (3.0.4)
+Building wheels for collected packages: dm-tree, pysdl2
+  Building wheel for dm-tree (setup.py): started
+  Building wheel for dm-tree (setup.py): finished with status 'done'
+  Created wheel for dm-tree: filename=dm_tree-0.1.8-cp36-cp36m-linux_x86_64.whl size=129031 sha256=981b60d43b1540987100d8aed5129ae752785e75fb11f9ffe5391a10b364ed23
+  Stored in directory: /home/paganinik/.cache/pip/wheels/f5/dd/2a/3b417533bbe7ab33059148d821e806daf1facb6e1c84c28815
+  Building wheel for pysdl2 (setup.py): started
+  Building wheel for pysdl2 (setup.py): finished with status 'done'
+  Created wheel for pysdl2: filename=PySDL2-0.9.16-py3-none-any.whl size=580365 sha256=cbc4bd85318df57895f2a3dcbe905c1756c40377a3cfd7d923eedb11eb107426
+  Stored in directory: /home/paganinik/.cache/pip/wheels/9d/fa/ab/88b16bf916872d226aa9ef71fecb0cdd3c8e91dc22afce8a29
+Successfully built dm-tree pysdl2
+Installing collected packages: pysdl2, numpy, cython, pyboy, dm-tree
+  WARNING: The scripts f2py, f2py3 and f2py3.6 are installed in '/home/paganinik/.local/bin' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+  WARNING: The scripts cygdb, cython and cythonize are installed in '/home/paganinik/.local/bin' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+  WARNING: The script pyboy is installed in '/home/paganinik/.local/bin' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+spacy 2.3.2 requires tqdm<5.0.0,>=4.38.0, but you have tqdm 4.31.1 which is incompatible.
+nvidia-pyprof 3. requires tqdm>=4.35.0, but you have tqdm 4.31.1 which is incompatible.
+Successfully installed cython-3.0.6 dm-tree-0.1.8 numpy-1.19.0 pyboy-1.4.7 pysdl2-0.9.16
+/home/paganinik/.local/lib/python3.6/site-packages/gymnasium/core.py:27: UserWarning: [33mWARN: Gymnasium minimally supports python 3.6 as the python foundation not longer supports the version, please update your version to 3.7+[0m
+  "Gymnasium minimally supports python 3.6 as the python foundation not longer supports the version, please update your version to 3.7+"
+lz4 not available, disabling sample compression. This will significantly impact RLlib performance. To install lz4, run `pip install lz4`.
+Traceback (most recent call last):
+  File "/home/paganinik/.local/lib/python3.6/site-packages/sdl2/dll.py", line 362, in <module>
+    dll = DLL("SDL2", ["SDL2", "SDL2-2.0", "SDL2-2.0.0"], os.getenv("PYSDL2_DLL_PATH"))
+  File "/home/paganinik/.local/lib/python3.6/site-packages/sdl2/dll.py", line 254, in __init__
+    (libinfo, dllmsg))
+RuntimeError: could not find any library for SDL2 (PYSDL2_DLL_PATH: unset)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "train.py", line 28, in <module>
+    from pyboy import PyBoy, WindowEvent # isort:skip
+  File "pyboy/__init__.py", line 14, in init pyboy.__init__
+  File "pyboy/pyboy.py", line 1, in init pyboy.pyboy
+  File "pyboy/core/__init__.py", line 6, in init pyboy.core.__init__
+  File "pyboy/core/mb.py", line 1, in init pyboy.core.mb
+  File "pyboy/core/sound.py", line 13, in init pyboy.core.sound
+  File "/home/paganinik/.local/lib/python3.6/site-packages/sdl2/__init__.py", line 2, in <module>
+    from .dll import get_dll_file, _bind
+  File "/home/paganinik/.local/lib/python3.6/site-packages/sdl2/dll.py", line 364, in <module>
+    raise ImportError(exc)
+ImportError: could not find any library for SDL2 (PYSDL2_DLL_PATH: unset)

@@ -1,0 +1,63 @@
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: rllib in /home/paganinik/.local/lib/python3.6/site-packages (0.0.1)
+Requirement already satisfied: ray in /home/paganinik/.local/lib/python3.6/site-packages (2.4.0)
+Requirement already satisfied: gymnasium in /home/paganinik/.local/lib/python3.6/site-packages (0.26.3)
+Requirement already satisfied: dm_tree in /home/paganinik/.local/lib/python3.6/site-packages (0.1.8)
+Requirement already satisfied: pyboy in /home/paganinik/.local/lib/python3.6/site-packages (1.4.7)
+Requirement already satisfied: pysdl2 in /home/paganinik/.local/lib/python3.6/site-packages (0.9.16)
+Requirement already satisfied: click>=7.0 in /opt/conda/lib/python3.6/site-packages (from ray) (7.1.2)
+Requirement already satisfied: dataclasses in /home/paganinik/.local/lib/python3.6/site-packages (from ray) (0.8)
+Requirement already satisfied: pyyaml in /opt/conda/lib/python3.6/site-packages (from ray) (5.3.1)
+Requirement already satisfied: virtualenv<20.21.1,>=20.0.24 in /home/paganinik/.local/lib/python3.6/site-packages (from ray) (20.17.1)
+Requirement already satisfied: aiosignal in /home/paganinik/.local/lib/python3.6/site-packages (from ray) (1.2.0)
+Requirement already satisfied: frozenlist in /home/paganinik/.local/lib/python3.6/site-packages (from ray) (1.2.0)
+Requirement already satisfied: grpcio<=1.51.3,>=1.32.0 in /opt/conda/lib/python3.6/site-packages (from ray) (1.33.2)
+Requirement already satisfied: attrs in /opt/conda/lib/python3.6/site-packages (from ray) (20.2.0)
+Requirement already satisfied: protobuf!=3.19.5,>=3.15.3 in /home/paganinik/.local/lib/python3.6/site-packages (from ray) (3.19.6)
+Requirement already satisfied: filelock in /home/paganinik/.local/lib/python3.6/site-packages (from ray) (3.4.1)
+Requirement already satisfied: typing-extensions in /opt/conda/lib/python3.6/site-packages (from ray) (3.7.4.3)
+Requirement already satisfied: jsonschema in /opt/conda/lib/python3.6/site-packages (from ray) (3.0.2)
+Requirement already satisfied: requests in /opt/conda/lib/python3.6/site-packages (from ray) (2.24.0)
+Requirement already satisfied: msgpack<2.0.0,>=1.0.0 in /home/paganinik/.local/lib/python3.6/site-packages (from ray) (1.0.5)
+Requirement already satisfied: numpy>=1.16 in /home/paganinik/.local/lib/python3.6/site-packages (from ray) (1.19.0)
+Requirement already satisfied: importlib-metadata>=4.8.0 in /home/paganinik/.local/lib/python3.6/site-packages (from gymnasium) (4.8.3)
+Requirement already satisfied: gymnasium-notices>=0.0.1 in /home/paganinik/.local/lib/python3.6/site-packages (from gymnasium) (0.0.1)
+Requirement already satisfied: cloudpickle>=1.2.0 in /home/paganinik/.local/lib/python3.6/site-packages (from gymnasium) (2.2.1)
+Requirement already satisfied: cython>=0.29.16 in /home/paganinik/.local/lib/python3.6/site-packages (from pyboy) (3.0.6)
+Requirement already satisfied: pillow in /home/paganinik/.local/lib/python3.6/site-packages (from pyboy) (8.4.0)
+Requirement already satisfied: six>=1.5.2 in /opt/conda/lib/python3.6/site-packages (from grpcio<=1.51.3,>=1.32.0->ray) (1.15.0)
+Requirement already satisfied: zipp>=0.5 in /opt/conda/lib/python3.6/site-packages (from importlib-metadata>=4.8.0->gymnasium) (3.4.0)
+Requirement already satisfied: distlib<1,>=0.3.6 in /home/paganinik/.local/lib/python3.6/site-packages (from virtualenv<20.21.1,>=20.0.24->ray) (0.3.7)
+Requirement already satisfied: importlib-resources>=5.4 in /home/paganinik/.local/lib/python3.6/site-packages (from virtualenv<20.21.1,>=20.0.24->ray) (5.4.0)
+Requirement already satisfied: platformdirs<3,>=2.4 in /home/paganinik/.local/lib/python3.6/site-packages (from virtualenv<20.21.1,>=20.0.24->ray) (2.4.0)
+Requirement already satisfied: pyrsistent>=0.14.0 in /opt/conda/lib/python3.6/site-packages (from jsonschema->ray) (0.17.3)
+Requirement already satisfied: setuptools in /opt/conda/lib/python3.6/site-packages (from jsonschema->ray) (59.6.0)
+Requirement already satisfied: idna<3,>=2.5 in /opt/conda/lib/python3.6/site-packages (from requests->ray) (2.9)
+Requirement already satisfied: urllib3!=1.25.0,!=1.25.1,<1.26,>=1.21.1 in /opt/conda/lib/python3.6/site-packages (from requests->ray) (1.25.11)
+Requirement already satisfied: certifi>=2017.4.17 in /opt/conda/lib/python3.6/site-packages (from requests->ray) (2020.6.20)
+Requirement already satisfied: chardet<4,>=3.0.2 in /opt/conda/lib/python3.6/site-packages (from requests->ray) (3.0.4)
+/home/paganinik/.local/lib/python3.6/site-packages/gymnasium/core.py:27: UserWarning: [33mWARN: Gymnasium minimally supports python 3.6 as the python foundation not longer supports the version, please update your version to 3.7+[0m
+  "Gymnasium minimally supports python 3.6 as the python foundation not longer supports the version, please update your version to 3.7+"
+lz4 not available, disabling sample compression. This will significantly impact RLlib performance. To install lz4, run `pip install lz4`.
+Traceback (most recent call last):
+  File "/home/paganinik/.local/lib/python3.6/site-packages/sdl2/dll.py", line 362, in <module>
+    dll = DLL("SDL2", ["SDL2", "SDL2-2.0", "SDL2-2.0.0"], os.getenv("PYSDL2_DLL_PATH"))
+  File "/home/paganinik/.local/lib/python3.6/site-packages/sdl2/dll.py", line 254, in __init__
+    (libinfo, dllmsg))
+RuntimeError: could not find any library for SDL2 (PYSDL2_DLL_PATH: unset)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "train.py", line 28, in <module>
+    from pyboy import PyBoy, WindowEvent # isort:skip
+  File "pyboy/__init__.py", line 14, in init pyboy.__init__
+  File "pyboy/pyboy.py", line 1, in init pyboy.pyboy
+  File "pyboy/core/__init__.py", line 6, in init pyboy.core.__init__
+  File "pyboy/core/mb.py", line 1, in init pyboy.core.mb
+  File "pyboy/core/sound.py", line 13, in init pyboy.core.sound
+  File "/home/paganinik/.local/lib/python3.6/site-packages/sdl2/__init__.py", line 2, in <module>
+    from .dll import get_dll_file, _bind
+  File "/home/paganinik/.local/lib/python3.6/site-packages/sdl2/dll.py", line 364, in <module>
+    raise ImportError(exc)
+ImportError: could not find any library for SDL2 (PYSDL2_DLL_PATH: unset)
