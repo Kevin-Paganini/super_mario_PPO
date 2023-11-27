@@ -108,7 +108,7 @@ class SuperMarioGym(gym.Env):
             self.pyboy.send_input(WindowEvent.RELEASE_BUTTON_A)
         
         
-        reward = 0.1 * self.mario.score + self.mario.level_progress + 5 * self.mario.lives_left + self.mario.time_left
+        reward = 0.5 * self.mario.score + 0.5 * self.mario.level_progress + 10 * self.mario.time_left
         
         return (
             np.array(self.mario.game_area(), dtype=np.float32).reshape((16, 20)),    #the current state
@@ -129,7 +129,7 @@ def train():
     file_path = os.path.dirname(os.path.realpath(__file__))
     sys.path.insert(0, file_path + "/..")
     
-    ray.init(local_mode=True)    #spin up distributed computing using ray
+    ray.init()    #spin up distributed computing using ray
 
     config = (
         get_trainable_cls("PPO")
@@ -143,10 +143,10 @@ def train():
             "conv_filters": [[64, [2, 2], 1], [64, [4, 4], 1]],
             
             },
-            train_batch_size=64, 
-            num_sgd_iter=16, 
-            sgd_minibatch_size=32)
-        .rollouts(num_rollout_workers=1)
+            train_batch_size=4096, 
+            num_sgd_iter=256, 
+            sgd_minibatch_size=128)
+        .rollouts(num_rollout_workers=4)
         .resources(num_gpus=int(os.environ.get("RLLIB_NUM_GPUS", "0")))
         .rl_module(_enable_rl_module_api=False)  # Deactivate RLModule API
         .training(_enable_learner_api=False)  # Deactivate RLModule API
@@ -167,14 +167,14 @@ def train():
     for iteration in range(stop['training_iteration']):    #loop over training iterations
         result = algo.train()    #take a training step
         print('The agent encountered',result['episodes_this_iter'],'episodes this iteration...')
-        if iteration % 10 == 0:
+        if iteration % 5 == 0:
             os.makedirs(os.path.join(os.getcwd(), 'trained', f'{iteration}'), exist_ok=True)
             checkpoint_path = algo.save(os.path.join(os.getcwd(), 'trained', f'{iteration}'))
             steps_trained = checkpoint_path.metrics['info']['learner']['default_policy']['num_agent_steps_trained']
             sample_results = checkpoint_path.metrics['sampler_results']
             print(f"Model saved at iteration {iteration}, steps trained: {steps_trained}, sample results: {sample_results}")
-            with open(os.path.join(os.getcwd(), 'trained', f'{iteration}', 'stats.txt'), 'w') as f:
-                f.write(f"Model saved at iteration {iteration}, steps trained: {steps_trained}, sample results: {sample_results}")
+            with open(os.path.join(os.getcwd(), 'stats.txt'), 'a') as f:
+                f.write(f"Model saved at iteration {iteration}, steps trained: {steps_trained}, sample results: {sample_results}\n")
 
     algo.stop()    #release the training resources
     ray.shutdown()    #and shut down ray
