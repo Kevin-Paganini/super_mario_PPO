@@ -4,7 +4,7 @@
 #SBATCH --gpus=1
 #SBATCH --cpus-per-task=16
 command="python train.py"
-singularity exec --nv /data/cs3450/pytorch20.11.3.sif bash -c '
+singularity exec --nv /data/sdp/senior_design_llm/containers/llm-sd.sif bash -c '
     pip install rllib ray gymnasium dm_tree pyboy pysdl2 pysdl2-dll tensorflow-probability
     python train.py
 '

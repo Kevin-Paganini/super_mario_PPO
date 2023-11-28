@@ -1,0 +1,511 @@
+13:4: not a valid test operator: (
+13:4: not a valid test operator: 530.30.02
+Defaulting to user installation because normal site-packages is not writeable
+WARNING: Ignoring invalid distribution -ransformers (/home/paganinik/.local/lib/python3.10/site-packages)
+WARNING: Ignoring invalid distribution -ransformers (/home/paganinik/.local/lib/python3.10/site-packages)
+Looking in indexes: https://pypi.org/simple, https://pypi.ngc.nvidia.com
+Requirement already satisfied: rllib in /home/paganinik/.local/lib/python3.10/site-packages (0.0.1)
+Requirement already satisfied: ray in /home/paganinik/.local/lib/python3.10/site-packages (2.8.0)
+Requirement already satisfied: gymnasium in /home/paganinik/.local/lib/python3.10/site-packages (0.29.1)
+Requirement already satisfied: dm_tree in /home/paganinik/.local/lib/python3.10/site-packages (0.1.8)
+Requirement already satisfied: pyboy in /home/paganinik/.local/lib/python3.10/site-packages (1.6.9)
+Requirement already satisfied: pysdl2 in /home/paganinik/.local/lib/python3.10/site-packages (0.9.16)
+Requirement already satisfied: pysdl2-dll in /home/paganinik/.local/lib/python3.10/site-packages (2.28.4)
+Requirement already satisfied: tensorflow-probability in /home/paganinik/.local/lib/python3.10/site-packages (0.23.0)
+Requirement already satisfied: click>=7.0 in /usr/local/lib/python3.10/dist-packages (from ray) (8.1.3)
+Requirement already satisfied: filelock in /usr/local/lib/python3.10/dist-packages (from ray) (3.12.0)
+Requirement already satisfied: jsonschema in /usr/local/lib/python3.10/dist-packages (from ray) (4.17.3)
+Requirement already satisfied: msgpack<2.0.0,>=1.0.0 in /usr/local/lib/python3.10/dist-packages (from ray) (1.0.5)
+Requirement already satisfied: packaging in /usr/local/lib/python3.10/dist-packages (from ray) (23.1)
+Requirement already satisfied: protobuf!=3.19.5,>=3.15.3 in /usr/local/lib/python3.10/dist-packages (from ray) (3.20.3)
+Requirement already satisfied: pyyaml in /usr/local/lib/python3.10/dist-packages (from ray) (6.0)
+Requirement already satisfied: aiosignal in /usr/local/lib/python3.10/dist-packages (from ray) (1.3.1)
+Requirement already satisfied: frozenlist in /usr/local/lib/python3.10/dist-packages (from ray) (1.3.3)
+Requirement already satisfied: requests in /usr/local/lib/python3.10/dist-packages (from ray) (2.29.0)
+Requirement already satisfied: numpy>=1.19.3 in /home/paganinik/.local/lib/python3.10/site-packages (from ray) (1.26.0)
+Requirement already satisfied: cloudpickle>=1.2.0 in /usr/local/lib/python3.10/dist-packages (from gymnasium) (2.2.1)
+Requirement already satisfied: typing-extensions>=4.3.0 in /usr/local/lib/python3.10/dist-packages (from gymnasium) (4.5.0)
+Requirement already satisfied: farama-notifications>=0.0.1 in /home/paganinik/.local/lib/python3.10/site-packages (from gymnasium) (0.0.4)
+Requirement already satisfied: absl-py in /usr/local/lib/python3.10/dist-packages (from tensorflow-probability) (1.4.0)
+Requirement already satisfied: six>=1.10.0 in /usr/local/lib/python3.10/dist-packages (from tensorflow-probability) (1.16.0)
+Requirement already satisfied: decorator in /usr/local/lib/python3.10/dist-packages (from tensorflow-probability) (5.1.1)
+Requirement already satisfied: gast>=0.3.2 in /usr/local/lib/python3.10/dist-packages (from tensorflow-probability) (0.4.0)
+Requirement already satisfied: attrs>=17.4.0 in /usr/local/lib/python3.10/dist-packages (from jsonschema->ray) (23.1.0)
+Requirement already satisfied: pyrsistent!=0.17.0,!=0.17.1,!=0.17.2,>=0.14.0 in /usr/local/lib/python3.10/dist-packages (from jsonschema->ray) (0.19.3)
+Requirement already satisfied: charset-normalizer<4,>=2 in /usr/local/lib/python3.10/dist-packages (from requests->ray) (3.1.0)
+Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.10/dist-packages (from requests->ray) (3.4)
+Requirement already satisfied: urllib3<1.27,>=1.21.1 in /usr/local/lib/python3.10/dist-packages (from requests->ray) (1.26.15)
+Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.10/dist-packages (from requests->ray) (2022.12.7)
+WARNING: Ignoring invalid distribution -ransformers (/home/paganinik/.local/lib/python3.10/site-packages)
+WARNING: Ignoring invalid distribution -ransformers (/home/paganinik/.local/lib/python3.10/site-packages)
+WARNING: Ignoring invalid distribution -ransformers (/home/paganinik/.local/lib/python3.10/site-packages)
+WARNING: Ignoring invalid distribution -ransformers (/home/paganinik/.local/lib/python3.10/site-packages)
+
+[notice] A new release of pip is available: 23.1.2 -> 23.3.1
+[notice] To update, run: python3 -m pip install --upgrade pip
+2023-11-27 20:25:11,925	WARNING compression.py:16 -- lz4 not available, disabling sample compression. This will significantly impact RLlib performance. To install lz4, run `pip install lz4`.
+2023-11-27 20:25:13,306	WARNING __init__.py:10 -- PG has/have been moved to `rllib_contrib` and will no longer be maintained by the RLlib team. You can still use it/them normally inside RLlib util Ray 2.8, but from Ray 2.9 on, all `rllib_contrib` algorithms will no longer be part of the core repo, and will therefore have to be installed separately with pinned dependencies for e.g. ray[rllib] and other packages! See https://github.com/ray-project/ray/tree/master/rllib_contrib#rllib-contrib for more information on the RLlib contrib effort.
+UserWarning: Using SDL2 binaries from pysdl2-dll 2.28.4
+2023-11-27 20:25:18,859	INFO worker.py:1673 -- Started a local Ray instance.
+2023-11-27 20:25:38,853	WARNING __init__.py:10 -- A3C has/have been moved to `rllib_contrib` and will no longer be maintained by the RLlib team. You can still use it/them normally inside RLlib util Ray 2.8, but from Ray 2.9 on, all `rllib_contrib` algorithms will no longer be part of the core repo, and will therefore have to be installed separately with pinned dependencies for e.g. ray[rllib] and other packages! See https://github.com/ray-project/ray/tree/master/rllib_contrib#rllib-contrib for more information on the RLlib contrib effort.
+2023-11-27 20:25:38,854	WARNING __init__.py:10 -- A2C has/have been moved to `rllib_contrib` and will no longer be maintained by the RLlib team. You can still use it/them normally inside RLlib util Ray 2.8, but from Ray 2.9 on, all `rllib_contrib` algorithms will no longer be part of the core repo, and will therefore have to be installed separately with pinned dependencies for e.g. ray[rllib] and other packages! See https://github.com/ray-project/ray/tree/master/rllib_contrib#rllib-contrib for more information on the RLlib contrib effort.
+2023-11-27 20:25:38,870	WARNING __init__.py:10 -- AlphaZero has/have been moved to `rllib_contrib` and will no longer be maintained by the RLlib team. You can still use it/them normally inside RLlib util Ray 2.8, but from Ray 2.9 on, all `rllib_contrib` algorithms will no longer be part of the core repo, and will therefore have to be installed separately with pinned dependencies for e.g. ray[rllib] and other packages! See https://github.com/ray-project/ray/tree/master/rllib_contrib#rllib-contrib for more information on the RLlib contrib effort.
+2023-11-27 20:25:39,398	WARNING __init__.py:10 -- ApexDQN has/have been moved to `rllib_contrib` and will no longer be maintained by the RLlib team. You can still use it/them normally inside RLlib util Ray 2.8, but from Ray 2.9 on, all `rllib_contrib` algorithms will no longer be part of the core repo, and will therefore have to be installed separately with pinned dependencies for e.g. ray[rllib] and other packages! See https://github.com/ray-project/ray/tree/master/rllib_contrib#rllib-contrib for more information on the RLlib contrib effort.
+2023-11-27 20:25:39,437	WARNING __init__.py:10 -- DDPG has/have been moved to `rllib_contrib` and will no longer be maintained by the RLlib team. You can still use it/them normally inside RLlib util Ray 2.8, but from Ray 2.9 on, all `rllib_contrib` algorithms will no longer be part of the core repo, and will therefore have to be installed separately with pinned dependencies for e.g. ray[rllib] and other packages! See https://github.com/ray-project/ray/tree/master/rllib_contrib#rllib-contrib for more information on the RLlib contrib effort.
+2023-11-27 20:25:39,437	WARNING __init__.py:10 -- ApexDDPG has/have been moved to `rllib_contrib` and will no longer be maintained by the RLlib team. You can still use it/them normally inside RLlib util Ray 2.8, but from Ray 2.9 on, all `rllib_contrib` algorithms will no longer be part of the core repo, and will therefore have to be installed separately with pinned dependencies for e.g. ray[rllib] and other packages! See https://github.com/ray-project/ray/tree/master/rllib_contrib#rllib-contrib for more information on the RLlib contrib effort.
+2023-11-27 20:25:39,471	WARNING __init__.py:10 -- ES has/have been moved to `rllib_contrib` and will no longer be maintained by the RLlib team. You can still use it/them normally inside RLlib util Ray 2.8, but from Ray 2.9 on, all `rllib_contrib` algorithms will no longer be part of the core repo, and will therefore have to be installed separately with pinned dependencies for e.g. ray[rllib] and other packages! See https://github.com/ray-project/ray/tree/master/rllib_contrib#rllib-contrib for more information on the RLlib contrib effort.
+2023-11-27 20:25:39,474	WARNING __init__.py:10 -- ARS has/have been moved to `rllib_contrib` and will no longer be maintained by the RLlib team. You can still use it/them normally inside RLlib util Ray 2.8, but from Ray 2.9 on, all `rllib_contrib` algorithms will no longer be part of the core repo, and will therefore have to be installed separately with pinned dependencies for e.g. ray[rllib] and other packages! See https://github.com/ray-project/ray/tree/master/rllib_contrib#rllib-contrib for more information on the RLlib contrib effort.
+2023-11-27 20:25:39,509	WARNING __init__.py:10 -- BanditLinTS and BanditLinUCB has/have been moved to `rllib_contrib` and will no longer be maintained by the RLlib team. You can still use it/them normally inside RLlib util Ray 2.8, but from Ray 2.9 on, all `rllib_contrib` algorithms will no longer be part of the core repo, and will therefore have to be installed separately with pinned dependencies for e.g. ray[rllib] and other packages! See https://github.com/ray-project/ray/tree/master/rllib_contrib#rllib-contrib for more information on the RLlib contrib effort.
+2023-11-27 20:25:39,610	WARNING __init__.py:10 -- CRR has/have been moved to `rllib_contrib` and will no longer be maintained by the RLlib team. You can still use it/them normally inside RLlib util Ray 2.8, but from Ray 2.9 on, all `rllib_contrib` algorithms will no longer be part of the core repo, and will therefore have to be installed separately with pinned dependencies for e.g. ray[rllib] and other packages! See https://github.com/ray-project/ray/tree/master/rllib_contrib#rllib-contrib for more information on the RLlib contrib effort.
+2023-11-27 20:25:39,622	WARNING __init__.py:10 -- DDPPO has/have been moved to `rllib_contrib` and will no longer be maintained by the RLlib team. You can still use it/them normally inside RLlib util Ray 2.8, but from Ray 2.9 on, all `rllib_contrib` algorithms will no longer be part of the core repo, and will therefore have to be installed separately with pinned dependencies for e.g. ray[rllib] and other packages! See https://github.com/ray-project/ray/tree/master/rllib_contrib#rllib-contrib for more information on the RLlib contrib effort.
+2023-11-27 20:25:39,640	WARNING __init__.py:8 -- `Dreamer(V1)` has been removed from RLlib and will no longer be maintained by the RLlib team. Use `DreamerV3` instead, which is part of the RLlib library and will continue to be maintained and supported in the future. See https://github.com/ray-project/ray/tree/master/rllib/algorithms/dreamerv3 for more information on our DreamerV3 implementation.
+/home/paganinik/.local/lib/python3.10/site-packages/gymnasium/utils/passive_env_checker.py:135: UserWarning: [33mWARN: The obs returned by the `reset()` method was expecting numpy array dtype to be float32, actual type: float64[0m
+  logger.warn(
+/home/paganinik/.local/lib/python3.10/site-packages/gymnasium/utils/passive_env_checker.py:159: UserWarning: [33mWARN: The obs returned by the `reset()` method is not within the observation space.[0m
+  logger.warn(f"{pre} is not within the observation space.")
+2023-11-27 20:25:39,771	WARNING __init__.py:10 -- DT has/have been moved to `rllib_contrib` and will no longer be maintained by the RLlib team. You can still use it/them normally inside RLlib util Ray 2.8, but from Ray 2.9 on, all `rllib_contrib` algorithms will no longer be part of the core repo, and will therefore have to be installed separately with pinned dependencies for e.g. ray[rllib] and other packages! See https://github.com/ray-project/ray/tree/master/rllib_contrib#rllib-contrib for more information on the RLlib contrib effort.
+2023-11-27 20:25:39,880	WARNING __init__.py:10 -- AlphaStar has/have been moved to `rllib_contrib` and will no longer be maintained by the RLlib team. You can still use it/them normally inside RLlib util Ray 2.8, but from Ray 2.9 on, all `rllib_contrib` algorithms will no longer be part of the core repo, and will therefore have to be installed separately with pinned dependencies for e.g. ray[rllib] and other packages! See https://github.com/ray-project/ray/tree/master/rllib_contrib#rllib-contrib for more information on the RLlib contrib effort.
+2023-11-27 20:25:39,895	WARNING __init__.py:10 -- MADDDPG has/have been moved to `rllib_contrib` and will no longer be maintained by the RLlib team. You can still use it/them normally inside RLlib util Ray 2.8, but from Ray 2.9 on, all `rllib_contrib` algorithms will no longer be part of the core repo, and will therefore have to be installed separately with pinned dependencies for e.g. ray[rllib] and other packages! See https://github.com/ray-project/ray/tree/master/rllib_contrib#rllib-contrib for more information on the RLlib contrib effort.
+2023-11-27 20:25:39,907	WARNING __init__.py:10 -- MAML has/have been moved to `rllib_contrib` and will no longer be maintained by the RLlib team. You can still use it/them normally inside RLlib util Ray 2.8, but from Ray 2.9 on, all `rllib_contrib` algorithms will no longer be part of the core repo, and will therefore have to be installed separately with pinned dependencies for e.g. ray[rllib] and other packages! See https://github.com/ray-project/ray/tree/master/rllib_contrib#rllib-contrib for more information on the RLlib contrib effort.
+2023-11-27 20:25:39,924	WARNING __init__.py:10 -- MBMPO has/have been moved to `rllib_contrib` and will no longer be maintained by the RLlib team. You can still use it/them normally inside RLlib util Ray 2.8, but from Ray 2.9 on, all `rllib_contrib` algorithms will no longer be part of the core repo, and will therefore have to be installed separately with pinned dependencies for e.g. ray[rllib] and other packages! See https://github.com/ray-project/ray/tree/master/rllib_contrib#rllib-contrib for more information on the RLlib contrib effort.
+2023-11-27 20:25:39,942	WARNING __init__.py:10 -- QMIX has/have been moved to `rllib_contrib` and will no longer be maintained by the RLlib team. You can still use it/them normally inside RLlib util Ray 2.8, but from Ray 2.9 on, all `rllib_contrib` algorithms will no longer be part of the core repo, and will therefore have to be installed separately with pinned dependencies for e.g. ray[rllib] and other packages! See https://github.com/ray-project/ray/tree/master/rllib_contrib#rllib-contrib for more information on the RLlib contrib effort.
+2023-11-27 20:25:39,957	WARNING __init__.py:10 -- R2D2 has/have been moved to `rllib_contrib` and will no longer be maintained by the RLlib team. You can still use it/them normally inside RLlib util Ray 2.8, but from Ray 2.9 on, all `rllib_contrib` algorithms will no longer be part of the core repo, and will therefore have to be installed separately with pinned dependencies for e.g. ray[rllib] and other packages! See https://github.com/ray-project/ray/tree/master/rllib_contrib#rllib-contrib for more information on the RLlib contrib effort.
+2023-11-27 20:25:39,987	WARNING __init__.py:10 -- SlateQ has/have been moved to `rllib_contrib` and will no longer be maintained by the RLlib team. You can still use it/them normally inside RLlib util Ray 2.8, but from Ray 2.9 on, all `rllib_contrib` algorithms will no longer be part of the core repo, and will therefore have to be installed separately with pinned dependencies for e.g. ray[rllib] and other packages! See https://github.com/ray-project/ray/tree/master/rllib_contrib#rllib-contrib for more information on the RLlib contrib effort.
+2023-11-27 20:25:39,997	WARNING __init__.py:10 -- TD3 has/have been moved to `rllib_contrib` and will no longer be maintained by the RLlib team. You can still use it/them normally inside RLlib util Ray 2.8, but from Ray 2.9 on, all `rllib_contrib` algorithms will no longer be part of the core repo, and will therefore have to be installed separately with pinned dependencies for e.g. ray[rllib] and other packages! See https://github.com/ray-project/ray/tree/master/rllib_contrib#rllib-contrib for more information on the RLlib contrib effort.
+2023-11-27 20:25:40,018	WARNING __init__.py:10 -- LeelaChessZero has/have been moved to `rllib_contrib` and will no longer be maintained by the RLlib team. You can still use it/them normally inside RLlib util Ray 2.8, but from Ray 2.9 on, all `rllib_contrib` algorithms will no longer be part of the core repo, and will therefore have to be installed separately with pinned dependencies for e.g. ray[rllib] and other packages! See https://github.com/ray-project/ray/tree/master/rllib_contrib#rllib-contrib for more information on the RLlib contrib effort.
+/home/paganinik/.local/lib/python3.10/site-packages/ray/rllib/algorithms/algorithm.py:484: RayDeprecationWarning: This API is deprecated and may be removed in future Ray releases. You could suppress this warning by setting env variable PYTHONWARNINGS="ignore::DeprecationWarning"
+`UnifiedLogger` will be removed in Ray 2.7.
+  return UnifiedLogger(config, logdir, loggers=None)
+/home/paganinik/.local/lib/python3.10/site-packages/ray/tune/logger/unified.py:53: RayDeprecationWarning: This API is deprecated and may be removed in future Ray releases. You could suppress this warning by setting env variable PYTHONWARNINGS="ignore::DeprecationWarning"
+The `JsonLogger interface is deprecated in favor of the `ray.tune.json.JsonLoggerCallback` interface and will be removed in Ray 2.7.
+  self._loggers.append(cls(self.config, self.logdir, self.trial))
+/home/paganinik/.local/lib/python3.10/site-packages/ray/tune/logger/unified.py:53: RayDeprecationWarning: This API is deprecated and may be removed in future Ray releases. You could suppress this warning by setting env variable PYTHONWARNINGS="ignore::DeprecationWarning"
+The `CSVLogger interface is deprecated in favor of the `ray.tune.csv.CSVLoggerCallback` interface and will be removed in Ray 2.7.
+  self._loggers.append(cls(self.config, self.logdir, self.trial))
+/home/paganinik/.local/lib/python3.10/site-packages/ray/tune/logger/unified.py:53: RayDeprecationWarning: This API is deprecated and may be removed in future Ray releases. You could suppress this warning by setting env variable PYTHONWARNINGS="ignore::DeprecationWarning"
+The `TBXLogger interface is deprecated in favor of the `ray.tune.tensorboardx.TBXLoggerCallback` interface and will be removed in Ray 2.7.
+  self._loggers.append(cls(self.config, self.logdir, self.trial))
+2023-11-27 20:25:40,049	INFO tensorboardx.py:48 -- pip install "ray[tune]" to see TensorBoard files.
+2023-11-27 20:25:40,049	WARNING unified.py:56 -- Could not instantiate TBXLogger: No module named 'tensorboardX'.
+[36m(pid=937160)[0m lz4 not available, disabling sample compression. This will significantly impact RLlib performance. To install lz4, run `pip install lz4`.
+[36m(pid=937176)[0m lz4 not available, disabling sample compression. This will significantly impact RLlib performance. To install lz4, run `pip install lz4`.[32m [repeated 8x across cluster] (Ray deduplicates logs by default. Set RAY_DEDUP_LOGS=0 to disable log deduplication, or see https://docs.ray.io/en/master/ray-observability/ray-logging.html#log-deduplication for more options.)[0m
+[36m(pid=937864)[0m lz4 not available, disabling sample compression. This will significantly impact RLlib performance. To install lz4, run `pip install lz4`.[32m [repeated 32x across cluster][0m
+[36m(RolloutWorker pid=937160)[0m 2023-11-27 20:28:10,781	WARNING __init__.py:10 -- PG has/have been moved to `rllib_contrib` and will no longer be maintained by the RLlib team. You can still use it/them normally inside RLlib util Ray 2.8, but from Ray 2.9 on, all `rllib_contrib` algorithms will no longer be part of the core repo, and will therefore have to be installed separately with pinned dependencies for e.g. ray[rllib] and other packages! See https://github.com/ray-project/ray/tree/master/rllib_contrib#rllib-contrib for more information on the RLlib contrib effort.
+[36m(RolloutWorker pid=937160)[0m 2023-11-27 20:28:12,669	WARNING env.py:162 -- Your env doesn't have a .spec.max_episode_steps attribute. Your horizon will default to infinity, and your environment will not be reset.
+[36m(RolloutWorker pid=937160)[0m 2023-11-27 20:28:12,883	WARNING deprecation.py:50 -- DeprecationWarning: `ray.rllib.models.torch.complex_input_net.ComplexInputNetwork` has been deprecated. This will raise an error in the future!
+[36m(RolloutWorker pid=937160)[0m 2023-11-27 20:28:12,884	WARNING deprecation.py:50 -- DeprecationWarning: `ray.rllib.models.torch.fcnet.FullyConnectedNetwork` has been deprecated. This will raise an error in the future!
+[36m(pid=937937)[0m lz4 not available, disabling sample compression. This will significantly impact RLlib performance. To install lz4, run `pip install lz4`.[32m [repeated 11x across cluster][0m
+[36m(RolloutWorker pid=937531)[0m 2023-11-27 20:28:17,664	WARNING __init__.py:10 -- PG has/have been moved to `rllib_contrib` and will no longer be maintained by the RLlib team. You can still use it/them normally inside RLlib util Ray 2.8, but from Ray 2.9 on, all `rllib_contrib` algorithms will no longer be part of the core repo, and will therefore have to be installed separately with pinned dependencies for e.g. ray[rllib] and other packages! See https://github.com/ray-project/ray/tree/master/rllib_contrib#rllib-contrib for more information on the RLlib contrib effort.[32m [repeated 8x across cluster][0m
+[36m(pid=938275)[0m lz4 not available, disabling sample compression. This will significantly impact RLlib performance. To install lz4, run `pip install lz4`.[32m [repeated 15x across cluster][0m
+[36m(RolloutWorker pid=937885)[0m 2023-11-27 20:28:22,909	WARNING __init__.py:10 -- PG has/have been moved to `rllib_contrib` and will no longer be maintained by the RLlib team. You can still use it/them normally inside RLlib util Ray 2.8, but from Ray 2.9 on, all `rllib_contrib` algorithms will no longer be part of the core repo, and will therefore have to be installed separately with pinned dependencies for e.g. ray[rllib] and other packages! See https://github.com/ray-project/ray/tree/master/rllib_contrib#rllib-contrib for more information on the RLlib contrib effort.[32m [repeated 33x across cluster][0m
+2023-11-27 20:28:26,386	WARNING deprecation.py:50 -- DeprecationWarning: `ray.rllib.models.torch.complex_input_net.ComplexInputNetwork` has been deprecated. This will raise an error in the future!
+2023-11-27 20:28:26,387	WARNING deprecation.py:50 -- DeprecationWarning: `ray.rllib.models.torch.fcnet.FullyConnectedNetwork` has been deprecated. This will raise an error in the future!
+2023-11-27 20:28:26,561	INFO trainable.py:164 -- Trainable.setup took 166.512 seconds. If your trainable is slow to initialize, consider setting reuse_actors=True to reduce actor creation overheads.
+2023-11-27 20:28:26,562	WARNING util.py:62 -- Install gputil for GPU system monitoring.
+2023-11-27 20:28:52,430	WARNING deprecation.py:50 -- DeprecationWarning: `ray.rllib.execution.train_ops.multi_gpu_train_one_step` has been deprecated. This will raise an error in the future!
+2023-11-27 20:30:01,616	WARNING ppo.py:558 -- The mean reward returned from the environment is 98.39321899414062 but the vf_clip_param is set to 10.0. Consider increasing it for policy: default_policy to improve value function convergence.
+72
+[36m(RolloutWorker pid=937161)[0m 5
+[36m(RolloutWorker pid=937173)[0m 6[32m [repeated 8x across cluster][0m
+[36m(RolloutWorker pid=937885)[0m 5[32m [repeated 33x across cluster][0m
+[36m(RolloutWorker pid=937161)[0m 2[32m [repeated 510x across cluster][0m
+[36m(RolloutWorker pid=937161)[0m 3[32m [repeated 830x across cluster][0m
+[36m(RolloutWorker pid=937161)[0m 6[32m [repeated 833x across cluster][0m
+[36m(RolloutWorker pid=937164)[0m 2[32m [repeated 832x across cluster][0m
+[36m(RolloutWorker pid=937863)[0m 5[32m [repeated 821x across cluster][0m
+The agent encountered 20 episodes this iteration...
+Model saved at iteration 0, steps trained: 512.0, sample results: {'episode_reward_max': 3311.6999999999985, 'episode_reward_min': 1231.2999999999993, 'episode_reward_mean': 2879.31, 'episode_len_mean': 47.25, 'episode_media': {}, 'episodes_this_iter': 20, 'policy_reward_min': {}, 'policy_reward_max': {}, 'policy_reward_mean': {}, 'custom_metrics': {}, 'hist_stats': {'episode_reward': [3063.7, 1231.2999999999993, 2662.0999999999985, 3033.699999999999, 3141.0, 3252.0999999999976, 3084.8, 3180.1000000000017, 2146.0000000000005, 3180.1000000000017, 3194.9999999999986, 3176.5000000000014, 2226.9999999999995, 2550.1999999999994, 2939.2000000000007, 2919.3999999999987, 3311.6999999999985, 3113.3999999999987, 3183.600000000002, 2995.3000000000015], 'episode_lengths': [44, 59, 55, 38, 38, 51, 42, 34, 52, 35, 42, 35, 58, 57, 58, 44, 54, 47, 55, 47]}, 'sampler_perf': {'mean_raw_obs_processing_ms': 2.6284000169174897, 'mean_inference_ms': 8.162249709420859, 'mean_action_processing_ms': 0.9803796754515728, 'mean_env_wait_ms': 353.0768860930733, 'mean_env_render_ms': 0.0}, 'num_faulty_episodes': 0, 'connector_metrics': {'ObsPreprocessorConnector_ms': 0.013380050659179688, 'StateBufferConnector_ms': 0.06374359130859375, 'ViewRequirementAgentConnector_ms': 0.8642768859863281}}
+[36m(RolloutWorker pid=937161)[0m 1[32m [repeated 363x across cluster][0m
+[36m(RolloutWorker pid=937160)[0m 6[32m [repeated 858x across cluster][0m
+[36m(RolloutWorker pid=937162)[0m 2[32m [repeated 826x across cluster][0m
+[36m(RolloutWorker pid=937160)[0m 4[32m [repeated 820x across cluster][0m
+[36m(RolloutWorker pid=937161)[0m 4[32m [repeated 821x across cluster][0m
+[36m(RolloutWorker pid=937176)[0m 0[32m [repeated 771x across cluster][0m
+The agent encountered 25 episodes this iteration...
+[36m(RolloutWorker pid=937161)[0m 0
+[36m(RolloutWorker pid=937160)[0m 3
+[36m(RolloutWorker pid=937166)[0m 0[32m [repeated 853x across cluster][0m
+[36m(RolloutWorker pid=937160)[0m 4[32m [repeated 818x across cluster][0m
+[36m(RolloutWorker pid=937160)[0m 0[32m [repeated 838x across cluster][0m
+[36m(RolloutWorker pid=937160)[0m 1[32m [repeated 809x across cluster][0m
+The agent encountered 57 episodes this iteration...
+[36m(RolloutWorker pid=937161)[0m 0[32m [repeated 779x across cluster][0m
+[36m(RolloutWorker pid=937161)[0m 3[32m [repeated 852x across cluster][0m
+[36m(RolloutWorker pid=937162)[0m 5[32m [repeated 828x across cluster][0m
+[36m(RolloutWorker pid=937162)[0m 3[32m [repeated 826x across cluster][0m
+[36m(RolloutWorker pid=937160)[0m 2[32m [repeated 820x across cluster][0m
+The agent encountered 38 episodes this iteration...
+[36m(RolloutWorker pid=937161)[0m 4[32m [repeated 771x across cluster][0m
+[36m(RolloutWorker pid=937160)[0m 3[32m [repeated 855x across cluster][0m
+[36m(RolloutWorker pid=937161)[0m 1[32m [repeated 829x across cluster][0m
+[36m(RolloutWorker pid=937161)[0m 1[32m [repeated 834x across cluster][0m
+[36m(RolloutWorker pid=937160)[0m 1[32m [repeated 813x across cluster][0m
+[36m(RolloutWorker pid=937915)[0m 1[32m [repeated 763x across cluster][0m
+The agent encountered 60 episodes this iteration...
+[36m(RolloutWorker pid=937161)[0m 6[32m [repeated 3x across cluster][0m
+[36m(RolloutWorker pid=937160)[0m 5[32m [repeated 841x across cluster][0m
+[36m(RolloutWorker pid=937162)[0m 3[32m [repeated 835x across cluster][0m
+[36m(RolloutWorker pid=937161)[0m 1[32m [repeated 839x across cluster][0m
+[36m(RolloutWorker pid=937162)[0m 2[32m [repeated 815x across cluster][0m
+The agent encountered 52 episodes this iteration...
+Model saved at iteration 5, steps trained: 512.0, sample results: {'episode_reward_max': 110138.39999999995, 'episode_reward_min': 2419.7000000000007, 'episode_reward_mean': 22011.384, 'episode_len_mean': 78.79, 'episode_media': {}, 'episodes_this_iter': 52, 'policy_reward_min': {}, 'policy_reward_max': {}, 'policy_reward_mean': {}, 'custom_metrics': {}, 'hist_stats': {'episode_reward': [41322.30000000005, 2778.800000000001, 3180.1000000000017, 24459.999999999996, 3180.1000000000017, 47184.99999999997, 3188.9, 38699.89999999998, 3227.1, 3180.1000000000017, 100504.3999999999, 38589.69999999997, 2944.899999999998, 3173.3000000000015, 37766.99999999996, 2775.3999999999983, 33109.4, 3180.1000000000017, 2897.9999999999986, 24892.999999999964, 32264.700000000033, 3124.0000000000014, 34533.100000000035, 3108.0000000000014, 44244.6, 41889.100000000006, 2685.6000000000004, 35364.10000000004, 33068.30000000001, 3180.1000000000017, 26945.10000000002, 3180.1000000000017, 32794.09999999996, 3203.5999999999985, 23774.299999999974, 3234.1000000000013, 3238.300000000002, 40166.200000000055, 34436.799999999996, 41778.30000000001, 25038.899999999965, 35009.299999999996, 2867.500000000001, 39764.10000000002, 2825.499999999999, 40177.699999999946, 3140.999999999999, 42295.300000000054, 110138.39999999995, 3152.199999999999, 35239.1, 31751.99999999999, 3151.3000000000015, 2982.500000000001, 21694.80000000001, 3224.900000000002, 41517.20000000001, 3122.1000000000013, 3180.1000000000017, 25380.500000000022, 2419.7000000000007, 3180.1000000000017, 24686.400000000027, 40986.49999999996, 3026.0000000000014, 3180.1000000000017, 33576.09999999999, 3140.099999999999, 22020.200000000008, 36673.29999999998, 40873.29999999995, 3180.1000000000017, 31668.79999999999, 3009.900000000003, 3176.5000000000014, 3141.899999999999, 23125.599999999984, 28707.899999999976, 2798.7999999999993, 3166.000000000002, 43235.700000000084, 48485.09999999992, 3104.000000000002, 22901.30000000002, 3108.0000000000014, 3394.2000000000016, 42282.69999999997, 39748.70000000003, 3256.099999999998, 63607.29999999992, 2968.300000000001, 40093.799999999974, 34011.50000000001, 39261.900000000045, 32348.500000000033, 54846.900000000016, 36783.500000000015, 23479.39999999998, 3184.6999999999985, 3195.0999999999985], 'episode_lengths': [137, 35, 34, 83, 34, 134, 46, 126, 39, 35, 181, 112, 46, 46, 110, 41, 97, 34, 37, 93, 94, 40, 95, 35, 113, 123, 52, 115, 93, 34, 97, 34, 93, 38, 90, 36, 37, 114, 110, 116, 101, 98, 48, 113, 35, 121, 35, 117, 189, 36, 100, 108, 38, 48, 77, 36, 113, 39, 35, 91, 47, 34, 100, 118, 37, 35, 93, 37, 79, 112, 116, 34, 89, 74, 34, 37, 79, 115, 38, 38, 131, 193, 41, 81, 34, 51, 127, 113, 37, 169, 45, 118, 107, 119, 100, 164, 111, 79, 38, 38]}, 'sampler_perf': {'mean_raw_obs_processing_ms': 2.3901163335322906, 'mean_inference_ms': 7.7258273462363345, 'mean_action_processing_ms': 0.7122326243271292, 'mean_env_wait_ms': 343.3459869805202, 'mean_env_render_ms': 0.0}, 'num_faulty_episodes': 0, 'connector_metrics': {'ObsPreprocessorConnector_ms': 0.058408260345458984, 'StateBufferConnector_ms': 0.010380983352661133, 'ViewRequirementAgentConnector_ms': 0.9713399410247803}}
+[36m(RolloutWorker pid=937161)[0m 6[32m [repeated 767x across cluster][0m
+[36m(RolloutWorker pid=937162)[0m 6[32m [repeated 849x across cluster][0m
+[36m(RolloutWorker pid=937166)[0m 3[32m [repeated 821x across cluster][0m
+[36m(RolloutWorker pid=937935)[0m 3[32m [repeated 834x across cluster][0m
+[36m(RolloutWorker pid=937163)[0m 3[32m [repeated 810x across cluster][0m
+[36m(RolloutWorker pid=937178)[0m 3[32m [repeated 782x across cluster][0m
+The agent encountered 52 episodes this iteration...
+[36m(RolloutWorker pid=937161)[0m 3[32m [repeated 2x across cluster][0m
+[36m(RolloutWorker pid=937161)[0m 0[32m [repeated 859x across cluster][0m
+[36m(RolloutWorker pid=937161)[0m 6[32m [repeated 826x across cluster][0m
+[36m(RolloutWorker pid=937166)[0m 3[32m [repeated 825x across cluster][0m
+[36m(RolloutWorker pid=937161)[0m 6[32m [repeated 814x across cluster][0m
+The agent encountered 61 episodes this iteration...
+[36m(RolloutWorker pid=937161)[0m 3[32m [repeated 774x across cluster][0m
+[36m(RolloutWorker pid=937165)[0m 3[32m [repeated 854x across cluster][0m
+[36m(RolloutWorker pid=937164)[0m 3[32m [repeated 827x across cluster][0m
+[36m(RolloutWorker pid=937160)[0m 2[32m [repeated 829x across cluster][0m
+[36m(RolloutWorker pid=937934)[0m 3[32m [repeated 827x across cluster][0m
+[36m(RolloutWorker pid=937161)[0m 3[32m [repeated 757x across cluster][0m
+The agent encountered 49 episodes this iteration...
+[36m(RolloutWorker pid=937161)[0m 3[32m [repeated 5x across cluster][0m
+[36m(RolloutWorker pid=937161)[0m 3[32m [repeated 849x across cluster][0m
+[36m(RolloutWorker pid=937160)[0m 6[32m [repeated 826x across cluster][0m
+[36m(RolloutWorker pid=937166)[0m 3[32m [repeated 819x across cluster][0m
+[36m(RolloutWorker pid=937162)[0m 0[32m [repeated 826x across cluster][0m
+[36m(RolloutWorker pid=937490)[0m 6[32m [repeated 780x across cluster][0m
+The agent encountered 66 episodes this iteration...
+[36m(RolloutWorker pid=937161)[0m 3
+[36m(RolloutWorker pid=937160)[0m 6
+[36m(RolloutWorker pid=937161)[0m 6[32m [repeated 843x across cluster][0m
+[36m(RolloutWorker pid=937162)[0m 3[32m [repeated 832x across cluster][0m
+[36m(RolloutWorker pid=937164)[0m 2[32m [repeated 822x across cluster][0m
+[36m(RolloutWorker pid=937162)[0m 0[32m [repeated 818x across cluster][0m
+[36m(RolloutWorker pid=937936)[0m 6[32m [repeated 773x across cluster][0m
+The agent encountered 64 episodes this iteration...
+Model saved at iteration 10, steps trained: 512.0, sample results: {'episode_reward_max': 67635.40000000002, 'episode_reward_min': 2802.7999999999993, 'episode_reward_mean': 17249.471000000005, 'episode_len_mean': 64.93, 'episode_media': {}, 'episodes_this_iter': 64, 'policy_reward_min': {}, 'policy_reward_max': {}, 'policy_reward_mean': {}, 'custom_metrics': {}, 'hist_stats': {'episode_reward': [3215.999999999998, 23747.299999999977, 23469.000000000022, 3151.3000000000015, 3149.700000000001, 33645.90000000003, 33139.19999999999, 33929.099999999984, 2962.0000000000014, 3163.7000000000016, 33787.40000000004, 3135.4000000000015, 3180.1000000000017, 31461.699999999964, 35128.0, 23363.200000000008, 31447.800000000014, 3227.8999999999983, 34849.7, 36894.1, 23448.199999999997, 34998.09999999999, 31823.700000000004, 3180.1000000000017, 3178.3000000000015, 41174.499999999956, 3002.500000000001, 3184.200000000001, 3110.8000000000015, 27527.299999999967, 22100.30000000002, 33744.80000000004, 3180.1000000000017, 21864.40000000002, 2802.7999999999993, 3180.1000000000017, 2983.199999999999, 32113.899999999983, 35196.49999999997, 2925.100000000001, 3004.8, 3137.7000000000016, 23726.100000000017, 21974.500000000022, 20968.89999999999, 31942.900000000012, 3108.0000000000014, 3180.1000000000017, 3108.0000000000014, 3140.099999999999, 2917.600000000001, 3180.1000000000017, 37222.19999999998, 3180.1000000000017, 37317.200000000026, 3180.1000000000017, 23216.60000000001, 3180.1000000000017, 31569.10000000001, 38331.09999999998, 3060.2, 3160.0, 35808.2, 2839.400000000001, 20501.300000000017, 3180.1000000000017, 3135.4000000000015, 34576.7, 23397.600000000006, 31312.399999999958, 3041.3999999999987, 3192.2999999999984, 3108.0000000000014, 3048.4000000000015, 3180.1000000000017, 3180.1000000000017, 35793.10000000003, 50961.59999999997, 67635.40000000002, 3180.1000000000017, 3194.2000000000016, 21157.50000000002, 3176.5000000000014, 34788.79999999999, 31285.799999999996, 34604.30000000004, 38249.60000000003, 2883.4999999999986, 24921.39999999999, 3140.999999999999, 3108.0000000000014, 3156.8000000000015, 41644.29999999999, 32816.39999999996, 23118.49999999999, 3180.1000000000017, 3180.1000000000017, 3196.8000000000015, 3160.1000000000017, 38338.89999999998], 'episode_lengths': [38, 82, 87, 38, 39, 93, 92, 99, 45, 37, 94, 37, 34, 84, 102, 86, 94, 42, 109, 96, 79, 99, 88, 34, 34, 111, 40, 37, 41, 96, 74, 95, 34, 74, 35, 34, 46, 99, 107, 49, 41, 35, 84, 73, 73, 86, 34, 34, 34, 35, 43, 34, 117, 35, 105, 34, 82, 35, 86, 100, 34, 40, 95, 35, 73, 34, 36, 101, 81, 94, 46, 41, 34, 36, 34, 35, 108, 121, 130, 34, 37, 77, 34, 100, 85, 98, 109, 35, 86, 35, 35, 37, 111, 91, 91, 35, 35, 37, 37, 112]}, 'sampler_perf': {'mean_raw_obs_processing_ms': 2.4405635226492906, 'mean_inference_ms': 7.844385163683739, 'mean_action_processing_ms': 0.7178020652793888, 'mean_env_wait_ms': 347.4810281575968, 'mean_env_render_ms': 0.0}, 'num_faulty_episodes': 0, 'connector_metrics': {'ObsPreprocessorConnector_ms': 0.03365659713745117, 'StateBufferConnector_ms': 0.022244930267333984, 'ViewRequirementAgentConnector_ms': 0.7791478633880615}}
+[36m(RolloutWorker pid=937161)[0m 1[32m [repeated 10x across cluster][0m
+[36m(RolloutWorker pid=937162)[0m 3[32m [repeated 856x across cluster][0m
+[36m(RolloutWorker pid=937547)[0m 1[32m [repeated 601x across cluster][0m
+[36m(RolloutWorker pid=937175)[0m 3[32m [repeated 820x across cluster][0m
+[36m(RolloutWorker pid=937165)[0m 3[32m [repeated 812x across cluster][0m
+[36m(RolloutWorker pid=937166)[0m 2[32m [repeated 809x across cluster][0m
+The agent encountered 59 episodes this iteration...
+[36m(RolloutWorker pid=937161)[0m 1[32m [repeated 199x across cluster][0m
+[36m(RolloutWorker pid=937160)[0m 0[32m [repeated 850x across cluster][0m
+[36m(RolloutWorker pid=937160)[0m 6[32m [repeated 814x across cluster][0m
+[36m(RolloutWorker pid=937166)[0m 2[32m [repeated 840x across cluster][0m
+[36m(RolloutWorker pid=937164)[0m 3[32m [repeated 799x across cluster][0m
+[36m(RolloutWorker pid=937490)[0m 0[32m [repeated 783x across cluster][0m
+The agent encountered 59 episodes this iteration...
+[36m(RolloutWorker pid=937161)[0m 1[32m [repeated 11x across cluster][0m
+[36m(RolloutWorker pid=937161)[0m 2[32m [repeated 838x across cluster][0m
+[36m(RolloutWorker pid=937892)[0m 0[32m [repeated 833x across cluster][0m
+[36m(RolloutWorker pid=937167)[0m 0[32m [repeated 818x across cluster][0m
+[36m(RolloutWorker pid=937435)[0m 0[32m [repeated 805x across cluster][0m
+[36m(RolloutWorker pid=937169)[0m 0[32m [repeated 793x across cluster][0m
+The agent encountered 54 episodes this iteration...
+[36m(RolloutWorker pid=937161)[0m 6[32m [repeated 10x across cluster][0m
+[36m(RolloutWorker pid=937160)[0m 2[32m [repeated 848x across cluster][0m
+[36m(RolloutWorker pid=937163)[0m 2[32m [repeated 832x across cluster][0m
+[36m(RolloutWorker pid=937164)[0m 0[32m [repeated 830x across cluster][0m
+[36m(RolloutWorker pid=937161)[0m 6[32m [repeated 820x across cluster][0m
+The agent encountered 60 episodes this iteration...
+[36m(RolloutWorker pid=937161)[0m 3[32m [repeated 767x across cluster][0m
+[36m(RolloutWorker pid=937163)[0m 0[32m [repeated 851x across cluster][0m
+[36m(RolloutWorker pid=937165)[0m 1[32m [repeated 823x across cluster][0m
+[36m(RolloutWorker pid=937161)[0m 3[32m [repeated 819x across cluster][0m
+[36m(RolloutWorker pid=937164)[0m 0[32m [repeated 833x across cluster][0m
+[36m(RolloutWorker pid=937170)[0m 3[32m [repeated 768x across cluster][0m
+The agent encountered 53 episodes this iteration...
+Model saved at iteration 15, steps trained: 512.0, sample results: {'episode_reward_max': 141430.99999999994, 'episode_reward_min': 2838.1999999999985, 'episode_reward_mean': 23451.808000000005, 'episode_len_mean': 76.11, 'episode_media': {}, 'episodes_this_iter': 53, 'policy_reward_min': {}, 'policy_reward_max': {}, 'policy_reward_mean': {}, 'custom_metrics': {}, 'hist_stats': {'episode_reward': [37375.100000000006, 39176.000000000015, 40355.299999999945, 3030.6, 22324.40000000002, 31748.199999999964, 3191.3999999999996, 34533.600000000035, 38910.700000000026, 37513.99999999997, 32104.09999999998, 33760.30000000004, 36574.50000000002, 25521.699999999993, 34548.4, 33888.19999999999, 22288.400000000023, 39568.699999999975, 2838.1999999999985, 21286.400000000016, 3180.1000000000017, 3180.1000000000017, 35640.399999999994, 24387.799999999992, 3108.0000000000014, 21955.500000000022, 37767.30000000002, 37125.79999999999, 39140.700000000004, 42189.39999999996, 3180.1000000000017, 33239.9, 2862.500000000001, 3180.1000000000017, 22796.500000000022, 3196.5999999999985, 3052.5, 3180.1000000000017, 33551.699999999975, 3180.1000000000017, 23384.699999999993, 23940.5, 37779.400000000016, 24434.000000000022, 39180.10000000002, 3180.1000000000017, 34297.39999999999, 33145.9, 33290.09999999999, 37956.40000000003, 3140.999999999999, 33009.90000000001, 3122.1000000000013, 33643.19999999997, 32743.299999999996, 21698.60000000001, 33839.50000000003, 33695.200000000026, 37688.10000000005, 3182.600000000002, 31547.30000000002, 3180.1000000000017, 3180.1000000000017, 3048.4000000000015, 27746.19999999998, 3180.1000000000017, 21960.499999999978, 34280.4, 3135.4000000000015, 3180.1000000000017, 33970.99999999996, 21601.40000000001, 33947.700000000004, 33932.9, 3106.200000000001, 54168.69999999999, 27876.79999999998, 36937.600000000035, 3180.1000000000017, 3180.1000000000017, 36008.59999999997, 3230.7999999999997, 24334.600000000002, 33098.499999999985, 3180.1000000000017, 3194.7000000000016, 3180.1000000000017, 3180.1000000000017, 31825.600000000013, 3136.1000000000013, 35969.300000000025, 35070.3, 3108.0000000000014, 35147.5, 141430.99999999994, 3178.3000000000015, 34533.90000000003, 33538.59999999999, 3141.0, 33367.1], 'episode_lengths': [98, 114, 115, 39, 82, 86, 35, 92, 105, 117, 92, 95, 101, 98, 101, 98, 78, 108, 40, 71, 34, 34, 112, 83, 34, 75, 110, 114, 96, 122, 34, 92, 37, 34, 75, 37, 34, 36, 92, 34, 82, 87, 102, 87, 106, 34, 98, 95, 93, 100, 37, 92, 39, 93, 94, 74, 97, 93, 114, 40, 86, 35, 36, 36, 103, 35, 77, 94, 36, 34, 99, 73, 103, 105, 35, 132, 103, 100, 34, 35, 105, 36, 87, 94, 34, 36, 34, 34, 89, 36, 106, 98, 34, 110, 186, 35, 92, 96, 34, 103]}, 'sampler_perf': {'mean_raw_obs_processing_ms': 2.4770078552064083, 'mean_inference_ms': 7.952422822363413, 'mean_action_processing_ms': 0.7451397416732576, 'mean_env_wait_ms': 351.741946722805, 'mean_env_render_ms': 0.0}, 'num_faulty_episodes': 0, 'connector_metrics': {'ObsPreprocessorConnector_ms': 0.01953601837158203, 'StateBufferConnector_ms': 0.0222318172454834, 'ViewRequirementAgentConnector_ms': 1.0397779941558838}}
+[36m(RolloutWorker pid=937161)[0m 3[32m [repeated 5x across cluster][0m
+[36m(RolloutWorker pid=937165)[0m 3[32m [repeated 856x across cluster][0m
+[36m(RolloutWorker pid=937162)[0m 3[32m [repeated 823x across cluster][0m
+[36m(RolloutWorker pid=937163)[0m 2[32m [repeated 833x across cluster][0m
+[36m(RolloutWorker pid=937175)[0m 3[32m [repeated 822x across cluster][0m
+[36m(RolloutWorker pid=937899)[0m 1[32m [repeated 763x across cluster][0m
+The agent encountered 57 episodes this iteration...
+[36m(RolloutWorker pid=937161)[0m 3
+[36m(RolloutWorker pid=937160)[0m 6
+[36m(RolloutWorker pid=937865)[0m 6[32m [repeated 861x across cluster][0m
+[36m(RolloutWorker pid=937160)[0m 2[32m [repeated 805x across cluster][0m
+[36m(RolloutWorker pid=937160)[0m 3[32m [repeated 827x across cluster][0m
+[36m(RolloutWorker pid=937163)[0m 6[32m [repeated 829x across cluster][0m
+[36m(RolloutWorker pid=937899)[0m 6[32m [repeated 769x across cluster][0m
+The agent encountered 62 episodes this iteration...
+[36m(RolloutWorker pid=937161)[0m 3[32m [repeated 6x across cluster][0m
+[36m(RolloutWorker pid=937161)[0m 6[32m [repeated 851x across cluster][0m
+[36m(RolloutWorker pid=937531)[0m 6[32m [repeated 826x across cluster][0m
+[36m(RolloutWorker pid=937161)[0m 2[32m [repeated 822x across cluster][0m
+[36m(RolloutWorker pid=937166)[0m 3[32m [repeated 837x across cluster][0m
+[36m(RolloutWorker pid=937165)[0m 6[32m [repeated 760x across cluster][0m
+The agent encountered 59 episodes this iteration...
+[36m(RolloutWorker pid=937161)[0m 3[32m [repeated 3x across cluster][0m
+[36m(RolloutWorker pid=937165)[0m 0[32m [repeated 849x across cluster][0m
+[36m(RolloutWorker pid=937165)[0m 3[32m [repeated 823x across cluster][0m
+[36m(RolloutWorker pid=937542)[0m 6[32m [repeated 833x across cluster][0m
+[36m(RolloutWorker pid=937162)[0m 1[32m [repeated 821x across cluster][0m
+The agent encountered 55 episodes this iteration...
+[36m(RolloutWorker pid=937161)[0m 3[32m [repeated 771x across cluster][0m
+[36m(RolloutWorker pid=937165)[0m 6[32m [repeated 844x across cluster][0m
+[36m(RolloutWorker pid=937165)[0m 3[32m [repeated 817x across cluster][0m
+[36m(RolloutWorker pid=937162)[0m 6[32m [repeated 814x across cluster][0m
+[36m(RolloutWorker pid=937160)[0m 3[32m [repeated 837x across cluster][0m
+[36m(RolloutWorker pid=937531)[0m 3[32m [repeated 772x across cluster][0m
+The agent encountered 59 episodes this iteration...
+Model saved at iteration 20, steps trained: 512.0, sample results: {'episode_reward_max': 141563.40000000002, 'episode_reward_min': 2825.499999999999, 'episode_reward_mean': 22319.408, 'episode_len_mean': 72.69, 'episode_media': {}, 'episodes_this_iter': 59, 'policy_reward_min': {}, 'policy_reward_max': {}, 'policy_reward_mean': {}, 'custom_metrics': {}, 'hist_stats': {'episode_reward': [31412.199999999983, 3180.1000000000017, 3051.0000000000014, 32396.00000000001, 3180.1000000000017, 31321.29999999998, 35038.40000000002, 34745.49999999999, 3151.199999999999, 3572.599999999998, 23349.900000000027, 41389.70000000005, 21008.499999999985, 44885.79999999998, 34906.999999999985, 32684.00000000002, 36819.200000000004, 34559.70000000003, 3203.5999999999985, 3203.5000000000023, 35975.89999999995, 37070.09999999998, 21748.900000000005, 36318.999999999985, 22040.999999999975, 32527.899999999994, 22404.199999999975, 3122.1000000000013, 22077.2, 3178.3000000000015, 35677.70000000002, 35322.20000000001, 32809.30000000003, 33842.2, 3180.1000000000017, 21006.30000000001, 32984.49999999996, 3180.1000000000017, 35519.10000000002, 41211.70000000003, 3170.8000000000015, 25957.400000000005, 33643.599999999984, 3010.0, 22725.30000000001, 2871.400000000001, 3135.4000000000015, 3180.1000000000017, 3180.1000000000017, 31282.600000000024, 3155.5999999999985, 2825.499999999999, 34238.300000000025, 3140.999999999999, 3170.0999999999985, 35617.3, 22455.900000000012, 35540.99999999996, 21634.59999999998, 92111.6, 2957.6000000000013, 33482.90000000004, 3282.999999999998, 32425.40000000002, 3003.700000000001, 24187.200000000023, 33764.80000000003, 3230.7999999999997, 22571.700000000023, 3180.1000000000017, 3176.5000000000014, 32815.99999999998, 21786.699999999975, 21368.39999999999, 3148.2000000000016, 3194.3999999999983, 23308.500000000022, 3180.1000000000017, 22949.700000000004, 33279.60000000003, 42157.199999999975, 3245.1, 3180.1000000000017, 32541.799999999985, 32011.600000000042, 33170.69999999998, 33870.100000000035, 3108.0000000000014, 141563.40000000002, 3198.400000000002, 3180.1000000000017, 3212.0000000000014, 21598.000000000015, 22360.299999999985, 34179.09999999997, 34688.4, 32273.499999999996, 3180.1000000000017, 32684.99999999998, 31937.90000000002], 'episode_lengths': [88, 34, 35, 90, 35, 85, 95, 95, 38, 43, 81, 120, 73, 110, 102, 89, 105, 98, 38, 42, 94, 116, 81, 103, 78, 91, 80, 39, 81, 34, 96, 102, 95, 101, 34, 71, 92, 34, 102, 111, 40, 96, 96, 39, 75, 35, 36, 34, 34, 84, 37, 35, 99, 35, 42, 107, 79, 96, 75, 149, 38, 99, 40, 92, 43, 95, 94, 36, 78, 35, 34, 91, 76, 75, 34, 38, 79, 34, 80, 93, 102, 35, 34, 90, 87, 101, 97, 34, 186, 39, 35, 36, 73, 93, 94, 98, 88, 34, 88, 87]}, 'sampler_perf': {'mean_raw_obs_processing_ms': 2.455485921258231, 'mean_inference_ms': 7.961281961668431, 'mean_action_processing_ms': 0.7273023470493665, 'mean_env_wait_ms': 351.7379692143862, 'mean_env_render_ms': 0.0}, 'num_faulty_episodes': 0, 'connector_metrics': {'ObsPreprocessorConnector_ms': 0.0359644889831543, 'StateBufferConnector_ms': 0.03441643714904785, 'ViewRequirementAgentConnector_ms': 0.9492459297180176}}
+[36m(RolloutWorker pid=937161)[0m 3[32m [repeated 15x across cluster][0m
+[36m(RolloutWorker pid=937161)[0m 0[32m [repeated 853x across cluster][0m
+[36m(RolloutWorker pid=937161)[0m 6[32m [repeated 838x across cluster][0m
+[36m(RolloutWorker pid=937175)[0m 3[32m [repeated 824x across cluster][0m
+[36m(RolloutWorker pid=937161)[0m 3[32m [repeated 813x across cluster][0m
+[36m(RolloutWorker pid=937174)[0m 0[32m [repeated 769x across cluster][0m
+The agent encountered 58 episodes this iteration...
+[36m(RolloutWorker pid=937161)[0m 1
+[36m(RolloutWorker pid=937160)[0m 6
+[36m(RolloutWorker pid=937165)[0m 3[32m [repeated 854x across cluster][0m
+[36m(RolloutWorker pid=937176)[0m 6[32m [repeated 820x across cluster][0m
+[36m(RolloutWorker pid=937161)[0m 6[32m [repeated 817x across cluster][0m
+[36m(RolloutWorker pid=937165)[0m 3[32m [repeated 823x across cluster][0m
+[36m(RolloutWorker pid=937173)[0m 4[32m [repeated 769x across cluster][0m
+The agent encountered 58 episodes this iteration...
+[36m(RolloutWorker pid=937161)[0m 6[32m [repeated 12x across cluster][0m
+[36m(RolloutWorker pid=937532)[0m 3[32m [repeated 862x across cluster][0m
+[36m(RolloutWorker pid=937161)[0m 3[32m [repeated 823x across cluster][0m
+[36m(RolloutWorker pid=937161)[0m 6[32m [repeated 827x across cluster][0m
+[36m(RolloutWorker pid=937164)[0m 3[32m [repeated 826x across cluster][0m
+The agent encountered 60 episodes this iteration...
+[36m(RolloutWorker pid=937161)[0m 2[32m [repeated 763x across cluster][0m
+[36m(RolloutWorker pid=937864)[0m 3[32m [repeated 861x across cluster][0m
+[36m(RolloutWorker pid=937435)[0m 0[32m [repeated 817x across cluster][0m
+[36m(RolloutWorker pid=937160)[0m 3[32m [repeated 822x across cluster][0m
+[36m(RolloutWorker pid=937166)[0m 6[32m [repeated 808x across cluster][0m
+[36m(RolloutWorker pid=937549)[0m 6[32m [repeated 791x across cluster][0m
+The agent encountered 62 episodes this iteration...
+[36m(RolloutWorker pid=937161)[0m 3
+[36m(RolloutWorker pid=937160)[0m 3
+[36m(RolloutWorker pid=937169)[0m 3[32m [repeated 834x across cluster][0m
+[36m(RolloutWorker pid=937160)[0m 0[32m [repeated 832x across cluster][0m
+[36m(RolloutWorker pid=937160)[0m 6[32m [repeated 824x across cluster][0m
+[36m(RolloutWorker pid=937892)[0m 3[32m [repeated 822x across cluster][0m
+[36m(RolloutWorker pid=937166)[0m 0[32m [repeated 782x across cluster][0m
+The agent encountered 61 episodes this iteration...
+Model saved at iteration 25, steps trained: 512.0, sample results: {'episode_reward_max': 85959.60000000011, 'episode_reward_min': 2820.299999999999, 'episode_reward_mean': 18535.61200000001, 'episode_len_mean': 64.81, 'episode_media': {}, 'episodes_this_iter': 61, 'policy_reward_min': {}, 'policy_reward_max': {}, 'policy_reward_mean': {}, 'custom_metrics': {}, 'hist_stats': {'episode_reward': [33904.19999999999, 33518.69999999998, 31925.39999999998, 3176.5000000000014, 3180.1000000000017, 33655.200000000004, 3180.1000000000017, 37417.20000000003, 3108.0000000000014, 3122.1000000000013, 22112.000000000007, 3180.1000000000017, 34826.30000000005, 32474.800000000007, 36868.400000000016, 85959.60000000011, 33271.30000000004, 3246.8000000000015, 32184.80000000004, 32567.200000000015, 32022.800000000032, 32819.100000000035, 21763.299999999992, 3180.1000000000017, 62098.80000000003, 34997.59999999999, 33786.40000000002, 3156.500000000002, 3166.4000000000005, 32449.49999999997, 32485.499999999978, 3180.1000000000017, 3135.4000000000015, 3196.5999999999985, 3108.0000000000014, 39950.70000000002, 22729.7, 31963.100000000017, 32306.500000000036, 3180.1000000000017, 3180.1000000000017, 3180.1000000000017, 3180.1000000000017, 3154.8000000000015, 34296.09999999999, 23477.10000000002, 32279.89999999998, 3108.0000000000014, 3180.1000000000017, 3180.1000000000017, 3106.200000000001, 23999.300000000003, 33196.699999999975, 22877.50000000001, 2877.999999999999, 3180.1000000000017, 3180.1000000000017, 3133.0000000000014, 24127.599999999995, 3180.1000000000017, 3108.0000000000014, 22961.000000000015, 3108.0000000000014, 31924.600000000017, 31343.999999999978, 3180.1000000000017, 31726.600000000006, 33008.79999999998, 34292.799999999996, 31728.799999999967, 3180.1000000000017, 3180.1000000000017, 32186.200000000033, 25097.80000000001, 34780.10000000002, 2820.299999999999, 21312.10000000001, 3151.3000000000015, 32557.500000000036, 3108.0000000000014, 3108.0000000000014, 3141.6000000000017, 3161.7000000000016, 31651.199999999968, 33175.69999999998, 3108.0000000000014, 23225.59999999997, 35747.10000000006, 34405.49999999999, 22488.899999999987, 3180.1000000000017, 3180.1000000000017, 33972.399999999994, 3180.1000000000017, 3201.0000000000014, 22790.800000000007, 3123.4999999999986, 3180.1000000000017, 20973.500000000015, 3180.1000000000017], 'episode_lengths': [98, 101, 85, 34, 34, 92, 34, 97, 34, 39, 74, 34, 101, 90, 110, 139, 93, 38, 88, 92, 87, 90, 81, 35, 121, 100, 94, 36, 35, 88, 89, 34, 37, 37, 34, 102, 78, 91, 91, 34, 34, 34, 34, 34, 95, 80, 89, 34, 35, 34, 34, 88, 95, 82, 35, 35, 34, 39, 82, 34, 35, 78, 34, 94, 84, 34, 90, 89, 94, 91, 35, 34, 95, 91, 96, 38, 72, 38, 88, 34, 34, 34, 39, 86, 97, 34, 83, 101, 98, 78, 34, 34, 97, 34, 35, 82, 37, 34, 70, 34]}, 'sampler_perf': {'mean_raw_obs_processing_ms': 2.445657958634154, 'mean_inference_ms': 7.9299732770731035, 'mean_action_processing_ms': 0.7254423485183128, 'mean_env_wait_ms': 350.1197577225596, 'mean_env_render_ms': 0.0}, 'num_faulty_episodes': 0, 'connector_metrics': {'ObsPreprocessorConnector_ms': 0.02222752571105957, 'StateBufferConnector_ms': 0.01874685287475586, 'ViewRequirementAgentConnector_ms': 0.862734317779541}}
+[36m(RolloutWorker pid=937161)[0m 4[32m [repeated 3x across cluster][0m
+[36m(RolloutWorker pid=937161)[0m 3[32m [repeated 850x across cluster][0m
+[36m(RolloutWorker pid=937161)[0m 4[32m [repeated 837x across cluster][0m
+[36m(RolloutWorker pid=937161)[0m 3[32m [repeated 813x across cluster][0m
+[36m(RolloutWorker pid=937160)[0m 2[32m [repeated 821x across cluster][0m
+[36m(RolloutWorker pid=937175)[0m 1[32m [repeated 765x across cluster][0m
+The agent encountered 68 episodes this iteration...
+[36m(RolloutWorker pid=937161)[0m 3[32m [repeated 12x across cluster][0m
+[36m(RolloutWorker pid=937164)[0m 4[32m [repeated 830x across cluster][0m
+[36m(RolloutWorker pid=937160)[0m 4[32m [repeated 822x across cluster][0m
+[36m(RolloutWorker pid=937160)[0m 3[32m [repeated 819x across cluster][0m
+[36m(RolloutWorker pid=937165)[0m 0[32m [repeated 825x across cluster][0m
+[36m(RolloutWorker pid=937167)[0m 3[32m [repeated 797x across cluster][0m
+The agent encountered 46 episodes this iteration...
+[36m(RolloutWorker pid=937161)[0m 6[32m [repeated 5x across cluster][0m
+[36m(RolloutWorker pid=937166)[0m 2[32m [repeated 854x across cluster][0m
+[36m(RolloutWorker pid=937165)[0m 3[32m [repeated 815x across cluster][0m
+[36m(RolloutWorker pid=937550)[0m 3[32m [repeated 839x across cluster][0m
+[36m(RolloutWorker pid=937160)[0m 3[32m [repeated 806x across cluster][0m
+[36m(RolloutWorker pid=937170)[0m 4[32m [repeated 771x across cluster][0m
+The agent encountered 68 episodes this iteration...
+[36m(RolloutWorker pid=937161)[0m 0[32m [repeated 11x across cluster][0m
+[36m(RolloutWorker pid=937160)[0m 3[32m [repeated 858x across cluster][0m
+[36m(RolloutWorker pid=937161)[0m 2[32m [repeated 834x across cluster][0m
+[36m(RolloutWorker pid=937160)[0m 6[32m [repeated 827x across cluster][0m
+[36m(RolloutWorker pid=937934)[0m 3[32m [repeated 832x across cluster][0m
+[36m(RolloutWorker pid=937534)[0m 3[32m [repeated 746x across cluster][0m
+The agent encountered 63 episodes this iteration...
+[36m(RolloutWorker pid=937161)[0m 1
+[36m(RolloutWorker pid=937160)[0m 1
+[36m(RolloutWorker pid=937164)[0m 1[32m [repeated 856x across cluster][0m
+[36m(RolloutWorker pid=937163)[0m 3[32m [repeated 833x across cluster][0m
+[36m(RolloutWorker pid=937161)[0m 3[32m [repeated 828x across cluster][0m
+[36m(RolloutWorker pid=937164)[0m 3[32m [repeated 728x across cluster][0m
+[36m(RolloutWorker pid=937435)[0m 3[32m [repeated 746x across cluster][0m
+The agent encountered 73 episodes this iteration...
+Model saved at iteration 30, steps trained: 512.0, sample results: {'episode_reward_max': 39928.49999999999, 'episode_reward_min': 2784.6999999999994, 'episode_reward_mean': 17630.381000000005, 'episode_len_mean': 63.29, 'episode_media': {}, 'episodes_this_iter': 73, 'policy_reward_min': {}, 'policy_reward_max': {}, 'policy_reward_mean': {}, 'custom_metrics': {}, 'hist_stats': {'episode_reward': [32796.900000000016, 22709.899999999998, 31480.399999999954, 3180.1000000000017, 3180.1000000000017, 3180.1000000000017, 3151.3000000000015, 32785.400000000016, 3180.1000000000017, 3183.2999999999984, 32513.40000000001, 3108.0000000000014, 3108.0000000000014, 31241.700000000023, 31724.200000000008, 3180.1000000000017, 3108.0000000000014, 23769.900000000016, 34556.899999999994, 3108.0000000000014, 39928.49999999999, 32243.899999999983, 33441.80000000001, 3180.1000000000017, 3180.1000000000017, 31323.19999999998, 34393.799999999996, 34108.700000000026, 31033.40000000002, 23137.099999999995, 32692.599999999966, 34421.90000000001, 34202.499999999985, 33450.40000000003, 32066.200000000033, 22774.1, 32896.099999999984, 21356.00000000001, 22675.000000000015, 31707.099999999962, 3180.1000000000017, 24270.900000000012, 3180.1000000000017, 31577.09999999998, 21806.200000000008, 3180.1000000000017, 33710.30000000002, 3108.0000000000014, 3180.1000000000017, 3108.0000000000014, 3180.1000000000017, 3279.9000000000015, 3180.1000000000017, 3158.8000000000015, 32403.70000000001, 3184.6999999999985, 24379.19999999996, 32829.19999999999, 3180.1000000000017, 32026.399999999983, 3108.0000000000014, 3160.1000000000017, 2784.6999999999994, 33235.9, 3180.1000000000017, 32369.400000000027, 3180.1000000000017, 32730.799999999977, 35840.2, 3180.1000000000017, 33334.80000000001, 34362.89999999999, 3183.2999999999984, 3108.0000000000014, 22483.399999999976, 3180.1000000000017, 3180.1000000000017, 3180.1000000000017, 3153.3000000000015, 33173.59999999999, 23429.59999999998, 3180.1000000000017, 31732.900000000038, 21806.70000000002, 3180.1000000000017, 23368.400000000005, 3180.1000000000017, 20769.199999999993, 3180.1000000000017, 20735.300000000017, 3180.1000000000017, 3140.999999999999, 33642.999999999985, 31914.99999999998, 21709.39999999998, 31879.299999999963, 3180.1000000000017, 3108.0000000000014, 3203.5999999999985, 34845.69999999998], 'episode_lengths': [89, 78, 91, 35, 34, 34, 38, 91, 34, 37, 88, 34, 34, 84, 86, 34, 34, 83, 96, 34, 96, 92, 92, 34, 35, 87, 99, 94, 85, 79, 90, 94, 98, 91, 87, 77, 91, 71, 77, 90, 34, 83, 34, 88, 74, 34, 93, 34, 35, 34, 34, 36, 36, 35, 89, 38, 87, 93, 34, 90, 34, 37, 35, 96, 34, 97, 34, 89, 101, 34, 91, 101, 37, 34, 74, 34, 34, 34, 39, 92, 79, 34, 89, 75, 34, 81, 34, 73, 35, 70, 34, 35, 93, 86, 78, 87, 34, 34, 38, 103]}, 'sampler_perf': {'mean_raw_obs_processing_ms': 2.472892551436836, 'mean_inference_ms': 7.940411644079345, 'mean_action_processing_ms': 0.7195818537246974, 'mean_env_wait_ms': 351.65790230077624, 'mean_env_render_ms': 0.0}, 'num_faulty_episodes': 0, 'connector_metrics': {'ObsPreprocessorConnector_ms': 0.07749319076538086, 'StateBufferConnector_ms': 0.01645207405090332, 'ViewRequirementAgentConnector_ms': 0.768317461013794}}
+[36m(RolloutWorker pid=937161)[0m 6[32m [repeated 105x across cluster][0m
+[36m(RolloutWorker pid=937160)[0m 3[32m [repeated 855x across cluster][0m
+[36m(RolloutWorker pid=937160)[0m 3[32m [repeated 826x across cluster][0m
+[36m(RolloutWorker pid=937161)[0m 4[32m [repeated 837x across cluster][0m
+[36m(RolloutWorker pid=937161)[0m 3[32m [repeated 825x across cluster][0m
+The agent encountered 65 episodes this iteration...
+[36m(RolloutWorker pid=937161)[0m 1[32m [repeated 753x across cluster][0m
+[36m(RolloutWorker pid=937160)[0m 6[32m [repeated 856x across cluster][0m
+[36m(RolloutWorker pid=937161)[0m 3[32m [repeated 822x across cluster][0m
+[36m(RolloutWorker pid=937165)[0m 3[32m [repeated 829x across cluster][0m
+[36m(RolloutWorker pid=937160)[0m 1[32m [repeated 819x across cluster][0m
+[36m(RolloutWorker pid=937170)[0m 0[32m [repeated 765x across cluster][0m
+The agent encountered 62 episodes this iteration...
+[36m(RolloutWorker pid=937161)[0m 1[32m [repeated 7x across cluster][0m
+[36m(RolloutWorker pid=937175)[0m 0[32m [repeated 852x across cluster][0m
+[36m(RolloutWorker pid=937160)[0m 3[32m [repeated 820x across cluster][0m
+[36m(RolloutWorker pid=937548)[0m 3[32m [repeated 831x across cluster][0m
+[36m(RolloutWorker pid=937161)[0m 3[32m [repeated 797x across cluster][0m
+[36m(RolloutWorker pid=937167)[0m 2[32m [repeated 787x across cluster][0m
+The agent encountered 62 episodes this iteration...
+[36m(RolloutWorker pid=937161)[0m 3[32m [repeated 10x across cluster][0m
+[36m(RolloutWorker pid=937176)[0m 0[32m [repeated 842x across cluster][0m
+[36m(RolloutWorker pid=937161)[0m 6[32m [repeated 819x across cluster][0m
+[36m(RolloutWorker pid=937160)[0m 3[32m [repeated 833x across cluster][0m
+[36m(RolloutWorker pid=937546)[0m 6[32m [repeated 827x across cluster][0m
+[36m(RolloutWorker pid=937163)[0m 2[32m [repeated 771x across cluster][0m
+The agent encountered 48 episodes this iteration...
+[36m(RolloutWorker pid=937161)[0m 0[32m [repeated 4x across cluster][0m
+[36m(RolloutWorker pid=937165)[0m 1[32m [repeated 856x across cluster][0m
+[36m(RolloutWorker pid=937162)[0m 0[32m [repeated 837x across cluster][0m
+[36m(RolloutWorker pid=937166)[0m 1[32m [repeated 826x across cluster][0m
+[36m(RolloutWorker pid=937162)[0m 4[32m [repeated 810x across cluster][0m
+The agent encountered 68 episodes this iteration...
+Model saved at iteration 35, steps trained: 512.0, sample results: {'episode_reward_max': 143607.6, 'episode_reward_min': 2812.499999999999, 'episode_reward_mean': 22036.613, 'episode_len_mean': 71.45, 'episode_media': {}, 'episodes_this_iter': 68, 'policy_reward_min': {}, 'policy_reward_max': {}, 'policy_reward_mean': {}, 'custom_metrics': {}, 'hist_stats': {'episode_reward': [32790.40000000004, 22430.999999999978, 32859.600000000035, 22562.8, 33813.199999999975, 3076.8000000000015, 35977.10000000001, 3180.1000000000017, 33348.99999999998, 26204.200000000023, 31826.799999999974, 3180.1000000000017, 3180.1000000000017, 33518.70000000003, 3180.1000000000017, 3180.1000000000017, 31110.999999999978, 3162.1000000000017, 31603.399999999972, 3183.2999999999984, 33458.29999999999, 33726.30000000002, 36289.2, 36761.80000000003, 3180.1000000000017, 3180.1000000000017, 3123.4999999999986, 21346.80000000001, 3121.299999999999, 3194.2000000000016, 31664.400000000005, 3108.0000000000014, 31959.700000000023, 31541.300000000007, 3073.6000000000017, 3180.1000000000017, 32864.39999999997, 3108.0000000000014, 34957.30000000001, 3180.1000000000017, 23370.399999999972, 22274.3, 3180.1000000000017, 33006.59999999998, 3277.8000000000015, 3161.000000000002, 32873.50000000003, 32258.6, 33662.79999999998, 32263.600000000042, 38985.899999999994, 21268.80000000001, 3156.4000000000015, 36891.600000000035, 32480.300000000032, 31748.30000000004, 3048.5000000000014, 3108.0000000000014, 34415.09999999999, 3180.1000000000017, 3183.2999999999984, 34899.40000000003, 3180.1000000000017, 22956.09999999997, 3108.0000000000014, 33297.79999999999, 3044.9000000000015, 20766.599999999984, 36570.20000000003, 3118.5000000000014, 31985.50000000002, 42670.09999999998, 38866.900000000016, 143607.6, 26137.000000000004, 34793.80000000003, 3180.1000000000017, 40927.20000000001, 22795.199999999983, 32720.100000000002, 31213.899999999972, 35367.40000000004, 34101.50000000001, 66229.79999999994, 3124.8999999999987, 34923.09999999999, 3161.000000000002, 3148.7000000000016, 34251.899999999994, 32199.29999999998, 31845.500000000004, 3108.0000000000014, 31774.999999999993, 3163.7000000000016, 33447.899999999994, 33996.30000000003, 20740.90000000002, 3108.0000000000014, 2812.499999999999, 3133.499999999999], 'episode_lengths': [88, 77, 89, 76, 96, 39, 101, 34, 94, 91, 92, 34, 34, 90, 35, 34, 84, 38, 85, 37, 91, 93, 95, 109, 34, 34, 37, 72, 38, 37, 90, 34, 86, 88, 38, 34, 94, 34, 100, 34, 83, 85, 34, 93, 40, 34, 87, 89, 99, 90, 103, 77, 41, 96, 89, 87, 44, 34, 109, 35, 37, 97, 34, 84, 34, 96, 40, 73, 99, 39, 92, 103, 102, 184, 104, 97, 36, 102, 83, 90, 87, 104, 94, 133, 38, 99, 35, 37, 96, 90, 91, 34, 89, 40, 96, 102, 74, 34, 36, 41]}, 'sampler_perf': {'mean_raw_obs_processing_ms': 2.4849419824997034, 'mean_inference_ms': 7.946310085116206, 'mean_action_processing_ms': 0.7160447365065036, 'mean_env_wait_ms': 351.86011556078097, 'mean_env_render_ms': 0.0}, 'num_faulty_episodes': 0, 'connector_metrics': {'ObsPreprocessorConnector_ms': 0.09270143508911133, 'StateBufferConnector_ms': 0.03322482109069824, 'ViewRequirementAgentConnector_ms': 0.8933119773864746}}
+[36m(RolloutWorker pid=937161)[0m 0[32m [repeated 768x across cluster][0m
+[36m(RolloutWorker pid=937166)[0m 3[32m [repeated 846x across cluster][0m
+[36m(RolloutWorker pid=937161)[0m 3[32m [repeated 831x across cluster][0m
+[36m(RolloutWorker pid=937161)[0m 1[32m [repeated 820x across cluster][0m
+[36m(RolloutWorker pid=937168)[0m 1[32m [repeated 824x across cluster][0m
+[36m(RolloutWorker pid=937937)[0m 0[32m [repeated 777x across cluster][0m
+The agent encountered 62 episodes this iteration...
+[36m(RolloutWorker pid=937161)[0m 3
+[36m(RolloutWorker pid=937160)[0m 3
+[36m(RolloutWorker pid=937160)[0m 3[32m [repeated 856x across cluster][0m
+[36m(RolloutWorker pid=937161)[0m 3[32m [repeated 829x across cluster][0m
+[36m(RolloutWorker pid=937165)[0m 2[32m [repeated 827x across cluster][0m
+[36m(RolloutWorker pid=937161)[0m 3[32m [repeated 819x across cluster][0m
+The agent encountered 57 episodes this iteration...
+[36m(RolloutWorker pid=937161)[0m 0[32m [repeated 768x across cluster][0m
+[36m(RolloutWorker pid=937161)[0m 1[32m [repeated 856x across cluster][0m
+[36m(RolloutWorker pid=937161)[0m 1[32m [repeated 832x across cluster][0m
+[36m(RolloutWorker pid=937161)[0m 0[32m [repeated 813x across cluster][0m
+[36m(RolloutWorker pid=937164)[0m 4[32m [repeated 815x across cluster][0m
+[36m(RolloutWorker pid=937164)[0m 0[32m [repeated 778x across cluster][0m
+The agent encountered 62 episodes this iteration...
+[36m(RolloutWorker pid=937161)[0m 3[32m [repeated 5x across cluster][0m
+[36m(RolloutWorker pid=937160)[0m 4[32m [repeated 847x across cluster][0m
+[36m(RolloutWorker pid=937435)[0m 3[32m [repeated 836x across cluster][0m
+[36m(RolloutWorker pid=937161)[0m 3[32m [repeated 815x across cluster][0m
+[36m(RolloutWorker pid=937165)[0m 5[32m [repeated 824x across cluster][0m
+[36m(RolloutWorker pid=937165)[0m 3[32m [repeated 769x across cluster][0m
+The agent encountered 65 episodes this iteration...
+[36m(RolloutWorker pid=937161)[0m 3[32m [repeated 9x across cluster][0m
+[36m(RolloutWorker pid=937165)[0m 3[32m [repeated 847x across cluster][0m
+[36m(RolloutWorker pid=937165)[0m 0[32m [repeated 833x across cluster][0m
+[36m(RolloutWorker pid=937160)[0m 3[32m [repeated 817x across cluster][0m
+[36m(RolloutWorker pid=937161)[0m 0[32m [repeated 826x across cluster][0m
+[36m(RolloutWorker pid=937530)[0m 6[32m [repeated 773x across cluster][0m
+The agent encountered 50 episodes this iteration...
+Model saved at iteration 40, steps trained: 512.0, sample results: {'episode_reward_max': 39395.70000000004, 'episode_reward_min': 2678.300000000001, 'episode_reward_mean': 18073.66, 'episode_len_mean': 67.19, 'episode_media': {}, 'episodes_this_iter': 50, 'policy_reward_min': {}, 'policy_reward_max': {}, 'policy_reward_mean': {}, 'custom_metrics': {}, 'hist_stats': {'episode_reward': [3183.2999999999984, 3180.1000000000017, 35980.50000000002, 24316.90000000003, 3108.0000000000014, 34892.400000000016, 22482.099999999984, 3180.1000000000017, 3180.1000000000017, 3476.599999999998, 25366.70000000003, 34949.49999999998, 34098.799999999996, 3180.1000000000017, 3180.1000000000017, 3180.1000000000017, 33041.20000000004, 3094.899999999999, 3108.0000000000014, 36616.79999999999, 3141.899999999999, 3196.5999999999985, 22514.999999999975, 22337.5, 22525.199999999983, 23619.799999999996, 35825.99999999998, 2929.300000000002, 3180.1000000000017, 34921.0, 3124.8999999999987, 3129.3000000000015, 22497.800000000007, 36235.299999999996, 23338.900000000027, 23161.199999999997, 3180.1000000000017, 3180.1000000000017, 24178.000000000015, 3151.3000000000015, 30708.599999999977, 3151.9000000000015, 32160.899999999994, 3108.0000000000014, 3180.1000000000017, 3180.1000000000017, 2901.8, 37223.6, 3194.2000000000016, 3152.599999999999, 36361.399999999965, 3161.000000000002, 3362.900000000002, 3252.7999999999997, 22634.200000000004, 32347.79999999998, 2678.300000000001, 33139.799999999996, 24056.10000000002, 24016.99999999998, 34806.30000000002, 35273.299999999974, 22299.400000000016, 21865.39999999998, 33957.199999999975, 23378.399999999983, 39071.5, 35741.39999999999, 39395.70000000004, 3230.7999999999997, 3073.6000000000017, 34447.50000000004, 37199.29999999995, 3180.1000000000017, 3135.4000000000015, 3180.1000000000017, 23043.900000000027, 23064.69999999999, 35179.099999999984, 35015.90000000003, 37849.89999999998, 3091.3000000000015, 3180.1000000000017, 3108.0000000000014, 34567.099999999984, 3180.1000000000017, 32977.4, 31466.59999999998, 31851.699999999993, 3108.0000000000014, 37020.69999999998, 3151.3000000000015, 37131.4, 23799.0, 3025.099999999999, 3201.3999999999987, 33233.29999999997, 24189.599999999995, 22376.200000000008, 3180.1000000000017], 'episode_lengths': [37, 34, 101, 87, 34, 101, 75, 34, 34, 36, 88, 102, 95, 34, 35, 34, 90, 39, 34, 101, 36, 37, 78, 75, 75, 86, 106, 48, 34, 99, 38, 35, 84, 102, 78, 76, 34, 34, 86, 38, 83, 36, 86, 34, 34, 34, 42, 102, 37, 39, 104, 34, 45, 35, 83, 88, 41, 91, 84, 84, 95, 106, 78, 86, 102, 80, 120, 112, 110, 36, 38, 99, 100, 34, 36, 34, 85, 84, 98, 96, 105, 45, 34, 34, 98, 34, 89, 85, 89, 34, 98, 38, 113, 98, 43, 45, 94, 85, 75, 34]}, 'sampler_perf': {'mean_raw_obs_processing_ms': 2.510497432085332, 'mean_inference_ms': 7.938948009537507, 'mean_action_processing_ms': 0.7234425163091154, 'mean_env_wait_ms': 352.62167732413513, 'mean_env_render_ms': 0.0}, 'num_faulty_episodes': 0, 'connector_metrics': {'ObsPreprocessorConnector_ms': 0.05181527137756348, 'StateBufferConnector_ms': 0.018489360809326172, 'ViewRequirementAgentConnector_ms': 0.8396666049957275}}
+[36m(RolloutWorker pid=937161)[0m 0
+[36m(RolloutWorker pid=937160)[0m 3
+[36m(RolloutWorker pid=937164)[0m 3[32m [repeated 835x across cluster][0m
+[36m(RolloutWorker pid=937161)[0m 3[32m [repeated 827x across cluster][0m
+[36m(RolloutWorker pid=937171)[0m 2[32m [repeated 833x across cluster][0m
+[36m(RolloutWorker pid=937163)[0m 3[32m [repeated 797x across cluster][0m
+[36m(RolloutWorker pid=937167)[0m 1[32m [repeated 802x across cluster][0m
+The agent encountered 61 episodes this iteration...
+[36m(RolloutWorker pid=937161)[0m 4[32m [repeated 3x across cluster][0m
+[36m(RolloutWorker pid=937168)[0m 3[32m [repeated 844x across cluster][0m
+[36m(RolloutWorker pid=937162)[0m 1[32m [repeated 823x across cluster][0m
+[36m(RolloutWorker pid=937163)[0m 2[32m [repeated 832x across cluster][0m
+[36m(RolloutWorker pid=937160)[0m 3[32m [repeated 823x across cluster][0m
+[36m(RolloutWorker pid=937168)[0m 1[32m [repeated 771x across cluster][0m
+The agent encountered 47 episodes this iteration...
+[36m(RolloutWorker pid=937161)[0m 3[32m [repeated 5x across cluster][0m
+[36m(RolloutWorker pid=937162)[0m 5[32m [repeated 853x across cluster][0m
+[36m(RolloutWorker pid=937165)[0m 4[32m [repeated 833x across cluster][0m
+[36m(RolloutWorker pid=937161)[0m 4[32m [repeated 821x across cluster][0m
+[36m(RolloutWorker pid=937163)[0m 6[32m [repeated 815x across cluster][0m
+The agent encountered 62 episodes this iteration...
+[36m(RolloutWorker pid=937161)[0m 3[32m [repeated 775x across cluster][0m
+[36m(RolloutWorker pid=937166)[0m 6[32m [repeated 850x across cluster][0m
+[36m(RolloutWorker pid=937161)[0m 0[32m [repeated 824x across cluster][0m
+[36m(RolloutWorker pid=937165)[0m 3[32m [repeated 830x across cluster][0m
+[36m(RolloutWorker pid=937166)[0m 1[32m [repeated 810x across cluster][0m
+[36m(RolloutWorker pid=938233)[0m 4[32m [repeated 772x across cluster][0m
+The agent encountered 52 episodes this iteration...
+[36m(RolloutWorker pid=937161)[0m 3[32m [repeated 10x across cluster][0m
+[36m(RolloutWorker pid=937161)[0m 1[32m [repeated 855x across cluster][0m
+[36m(RolloutWorker pid=937160)[0m 1[32m [repeated 818x across cluster][0m
+[36m(RolloutWorker pid=937170)[0m 3[32m [repeated 822x across cluster][0m
+[36m(RolloutWorker pid=937160)[0m 3[32m [repeated 825x across cluster][0m
+[36m(RolloutWorker pid=937176)[0m 6[32m [repeated 776x across cluster][0m
+The agent encountered 58 episodes this iteration...
+Model saved at iteration 45, steps trained: 512.0, sample results: {'episode_reward_max': 98510.49999999996, 'episode_reward_min': 2656.5999999999995, 'episode_reward_mean': 21540.726000000006, 'episode_len_mean': 73.47, 'episode_media': {}, 'episodes_this_iter': 58, 'policy_reward_min': {}, 'policy_reward_max': {}, 'policy_reward_mean': {}, 'custom_metrics': {}, 'hist_stats': {'episode_reward': [43154.899999999994, 3183.2999999999984, 36521.80000000001, 36418.70000000001, 3180.1000000000017, 20744.199999999993, 3194.2000000000016, 34962.19999999999, 32106.200000000023, 3178.3000000000015, 21848.29999999998, 22511.100000000017, 40755.100000000035, 3108.0000000000014, 34376.2, 2980.400000000001, 3180.1000000000017, 21859.800000000014, 3141.0, 3180.1000000000017, 22680.200000000023, 3180.1000000000017, 3180.1000000000017, 22774.89999999997, 31604.900000000016, 23356.200000000015, 3180.1000000000017, 23504.90000000002, 36304.90000000005, 3180.1000000000017, 35124.899999999994, 21863.89999999998, 3233.999999999998, 32329.200000000008, 34794.39999999999, 34672.70000000002, 3180.1000000000017, 23842.2, 3180.1000000000017, 36784.40000000004, 31824.79999999998, 3236.6000000000017, 33172.89999999999, 3180.1000000000017, 23740.59999999998, 3180.1000000000017, 3180.1000000000017, 3129.400000000001, 21813.399999999976, 3382.7000000000016, 3108.0000000000014, 24157.900000000012, 33413.40000000001, 3490.3999999999983, 31794.90000000001, 33913.29999999996, 3197.999999999998, 33608.700000000026, 33211.000000000015, 98510.49999999996, 34788.20000000001, 22713.6, 32857.20000000003, 32561.099999999988, 3180.1000000000017, 31899.500000000022, 3237.7999999999984, 21641.300000000017, 36968.80000000004, 24875.29999999999, 26680.4, 34900.70000000001, 32390.799999999974, 35073.899999999994, 23474.500000000022, 33111.30000000004, 21231.09999999998, 38656.800000000025, 24707.799999999963, 3135.4000000000015, 34133.799999999996, 2656.5999999999995, 3039.4000000000015, 23109.199999999997, 34837.399999999994, 3133.0000000000014, 35315.70000000003, 3180.1000000000017, 31253.80000000002, 32983.80000000001, 34716.1, 3230.7999999999997, 32277.500000000007, 3140.8999999999987, 24527.599999999984, 3180.1000000000017, 35289.50000000001, 37802.7, 31805.800000000014, 22590.099999999977], 'episode_lengths': [117, 37, 103, 108, 34, 71, 37, 97, 95, 34, 76, 77, 106, 34, 105, 44, 34, 74, 34, 34, 75, 34, 34, 83, 86, 83, 34, 81, 104, 34, 100, 74, 37, 90, 110, 97, 34, 89, 34, 114, 86, 37, 97, 34, 88, 34, 34, 39, 81, 39, 34, 85, 92, 48, 89, 102, 38, 107, 102, 155, 103, 77, 89, 90, 34, 90, 40, 74, 112, 87, 92, 108, 93, 101, 79, 91, 76, 100, 88, 36, 104, 43, 37, 80, 110, 39, 97, 34, 89, 89, 104, 35, 93, 40, 89, 34, 100, 108, 86, 77]}, 'sampler_perf': {'mean_raw_obs_processing_ms': 2.4973750203927745, 'mean_inference_ms': 7.949822719583991, 'mean_action_processing_ms': 0.723400975221481, 'mean_env_wait_ms': 351.9829228004214, 'mean_env_render_ms': 0.0}, 'num_faulty_episodes': 0, 'connector_metrics': {'ObsPreprocessorConnector_ms': 0.033294677734375, 'StateBufferConnector_ms': 0.0258481502532959, 'ViewRequirementAgentConnector_ms': 0.7656865119934082}}
+[36m(RolloutWorker pid=937164)[0m 0[32m [repeated 2x across cluster][0m
+[36m(RolloutWorker pid=938261)[0m 4[32m [repeated 850x across cluster][0m
+[36m(RolloutWorker pid=937162)[0m 0[32m [repeated 809x across cluster][0m
+[36m(RolloutWorker pid=937160)[0m 3[32m [repeated 824x across cluster][0m
+[36m(RolloutWorker pid=937165)[0m 1[32m [repeated 803x across cluster][0m
+[36m(RolloutWorker pid=937165)[0m 1[32m [repeated 801x across cluster][0m
+The agent encountered 56 episodes this iteration...
+[36m(RolloutWorker pid=937161)[0m 3[32m [repeated 11x across cluster][0m
+[36m(RolloutWorker pid=937162)[0m 3[32m [repeated 853x across cluster][0m
+[36m(RolloutWorker pid=937164)[0m 3[32m [repeated 818x across cluster][0m
+[36m(RolloutWorker pid=937161)[0m 1[32m [repeated 831x across cluster][0m
+[36m(RolloutWorker pid=937160)[0m 3[32m [repeated 811x across cluster][0m
+[36m(RolloutWorker pid=937532)[0m 3[32m [repeated 778x across cluster][0m
+The agent encountered 57 episodes this iteration...
+[36m(RolloutWorker pid=937161)[0m 3[32m [repeated 7x across cluster][0m
+[36m(RolloutWorker pid=937161)[0m 3[32m [repeated 850x across cluster][0m
+[36m(RolloutWorker pid=937161)[0m 1[32m [repeated 824x across cluster][0m
+[36m(RolloutWorker pid=937160)[0m 3[32m [repeated 831x across cluster][0m
+[36m(RolloutWorker pid=937161)[0m 3[32m [repeated 829x across cluster][0m
+[36m(RolloutWorker pid=937864)[0m 3[32m [repeated 758x across cluster][0m
+The agent encountered 63 episodes this iteration...
+[36m(RolloutWorker pid=937161)[0m 4[32m [repeated 5x across cluster][0m
+[36m(RolloutWorker pid=937162)[0m 3[32m [repeated 841x across cluster][0m
+[36m(RolloutWorker pid=937930)[0m 1[32m [repeated 833x across cluster][0m
+[36m(RolloutWorker pid=937165)[0m 6[32m [repeated 818x across cluster][0m
+[36m(RolloutWorker pid=937166)[0m 3[32m [repeated 805x across cluster][0m
+[36m(RolloutWorker pid=937490)[0m 3[32m [repeated 781x across cluster][0m
+The agent encountered 60 episodes this iteration...
+[36m(RolloutWorker pid=937161)[0m 3[32m [repeated 22x across cluster][0m
+[36m(RolloutWorker pid=937161)[0m 1[32m [repeated 841x across cluster][0m
+[36m(RolloutWorker pid=937161)[0m 0[32m [repeated 828x across cluster][0m
+[36m(RolloutWorker pid=937175)[0m 3[32m [repeated 823x across cluster][0m
+[36m(RolloutWorker pid=937435)[0m 6[32m [repeated 832x across cluster][0m
+[36m(RolloutWorker pid=937899)[0m 5[32m [repeated 772x across cluster][0m
+The agent encountered 60 episodes this iteration...
+Model saved at iteration 50, steps trained: 512.0, sample results: {'episode_reward_max': 77554.3000000001, 'episode_reward_min': 2813.9999999999986, 'episode_reward_mean': 17756.105000000003, 'episode_len_mean': 65.68, 'episode_media': {}, 'episodes_this_iter': 60, 'policy_reward_min': {}, 'policy_reward_max': {}, 'policy_reward_mean': {}, 'custom_metrics': {}, 'hist_stats': {'episode_reward': [35152.30000000003, 3180.1000000000017, 23539.60000000002, 22805.300000000017, 38450.200000000004, 3140.999999999999, 3148.2000000000016, 2813.9999999999986, 22623.099999999977, 25996.999999999996, 3180.1000000000017, 22899.3, 3180.1000000000017, 3176.5000000000014, 26010.700000000037, 40183.600000000035, 3180.1000000000017, 77554.3000000001, 3115.9, 3054.2000000000003, 24012.200000000004, 37119.400000000016, 3038.2000000000007, 3048.4000000000015, 21239.89999999998, 23593.900000000012, 3178.0000000000014, 37257.400000000045, 23490.90000000001, 36345.80000000002, 3101.2000000000016, 32547.599999999962, 2973.9999999999986, 39886.20000000003, 3180.1000000000017, 3273.000000000002, 24672.999999999978, 3183.2999999999984, 3180.1000000000017, 3073.6000000000017, 33927.1, 32557.59999999997, 3180.1000000000017, 2836.200000000001, 42237.49999999998, 3176.5000000000014, 3180.1000000000017, 38334.299999999996, 3180.1000000000017, 22005.400000000005, 36951.40000000003, 32835.30000000001, 33952.1, 3091.1000000000013, 68263.19999999992, 35940.59999999998, 3183.2999999999984, 3180.1000000000017, 24074.300000000017, 3180.1000000000017, 32526.600000000035, 3180.1000000000017, 21957.200000000008, 3183.2999999999984, 33095.29999999998, 41437.799999999945, 3141.0, 3215.7999999999997, 3180.1000000000017, 34501.700000000004, 21447.09999999998, 3098.7999999999984, 3180.1000000000017, 39124.80000000004, 3183.2999999999984, 3207.1000000000017, 3073.6000000000017, 22938.000000000022, 3183.2999999999984, 38628.40000000001, 32686.399999999958, 3176.5000000000014, 3135.4000000000015, 34376.000000000015, 3060.2, 3180.1000000000017, 3180.1000000000017, 32597.299999999974, 3123.4999999999986, 22154.000000000022, 3105.1000000000017, 38731.00000000003, 3180.1000000000017, 23952.499999999985, 22905.299999999996, 22740.799999999996, 32360.399999999983, 34173.899999999994, 3153.7000000000016, 3106.599999999999], 'episode_lengths': [98, 34, 91, 80, 108, 35, 34, 42, 82, 92, 34, 81, 35, 34, 91, 110, 34, 162, 38, 36, 82, 100, 40, 36, 75, 83, 38, 116, 86, 106, 37, 95, 38, 104, 34, 39, 83, 37, 35, 38, 94, 92, 35, 35, 114, 35, 34, 105, 34, 74, 99, 89, 97, 35, 165, 97, 37, 35, 84, 34, 91, 34, 74, 37, 90, 112, 34, 36, 34, 102, 74, 42, 35, 115, 37, 35, 38, 80, 37, 104, 91, 36, 36, 94, 34, 34, 34, 88, 37, 75, 39, 108, 34, 83, 79, 75, 93, 101, 41, 38]}, 'sampler_perf': {'mean_raw_obs_processing_ms': 2.5011900730558234, 'mean_inference_ms': 7.937348314108619, 'mean_action_processing_ms': 0.7205884256107005, 'mean_env_wait_ms': 352.981815809524, 'mean_env_render_ms': 0.0}, 'num_faulty_episodes': 0, 'connector_metrics': {'ObsPreprocessorConnector_ms': 0.0564877986907959, 'StateBufferConnector_ms': 0.0379791259765625, 'ViewRequirementAgentConnector_ms': 0.7581994533538818}}
+[36m(RolloutWorker pid=937161)[0m 3[32m [repeated 2x across cluster][0m
+[36m(RolloutWorker pid=937160)[0m 3[32m [repeated 848x across cluster][0m
+[36m(RolloutWorker pid=937163)[0m 5[32m [repeated 825x across cluster][0m
+[36m(RolloutWorker pid=937162)[0m 3[32m [repeated 826x across cluster][0m
+[36m(RolloutWorker pid=937168)[0m 6[32m [repeated 831x across cluster][0m
+[36m(RolloutWorker pid=937533)[0m 3[32m [repeated 765x across cluster][0m
+The agent encountered 59 episodes this iteration...
+[36m(RolloutWorker pid=937161)[0m 1
+[36m(RolloutWorker pid=937160)[0m 3
+[36m(RolloutWorker pid=937165)[0m 6[32m [repeated 852x across cluster][0m
+[36m(RolloutWorker pid=937176)[0m 3[32m [repeated 835x across cluster][0m
+[36m(RolloutWorker pid=937162)[0m 3[32m [repeated 822x across cluster][0m
+[36m(RolloutWorker pid=937435)[0m 3[32m [repeated 821x across cluster][0m
+[36m(RolloutWorker pid=937885)[0m 6[32m [repeated 763x across cluster][0m
+The agent encountered 63 episodes this iteration...
+[36m(RolloutWorker pid=937161)[0m 1[32m [repeated 4x across cluster][0m
+[36m(RolloutWorker pid=937162)[0m 1[32m [repeated 850x across cluster][0m
+[36m(RolloutWorker pid=937161)[0m 6[32m [repeated 839x across cluster][0m
+[36m(RolloutWorker pid=937165)[0m 3[32m [repeated 816x across cluster][0m
+[36m(RolloutWorker pid=937161)[0m 3[32m [repeated 823x across cluster][0m
+[36m(RolloutWorker pid=937178)[0m 6[32m [repeated 763x across cluster][0m
+The agent encountered 65 episodes this iteration...
+[36m(RolloutWorker pid=937161)[0m 5[32m [repeated 8x across cluster][0m
+[36m(RolloutWorker pid=937162)[0m 1[32m [repeated 835x across cluster][0m
+[36m(RolloutWorker pid=937490)[0m 2[32m [repeated 832x across cluster][0m
+[36m(RolloutWorker pid=937161)[0m 3[32m [repeated 811x across cluster][0m
+[36m(RolloutWorker pid=937162)[0m 3[32m [repeated 828x across cluster][0m
+[36m(RolloutWorker pid=937165)[0m 3[32m [repeated 774x across cluster][0m
+The agent encountered 53 episodes this iteration...
+[36m(RolloutWorker pid=937161)[0m 1[32m [repeated 19x across cluster][0m
+[36m(RolloutWorker pid=937161)[0m 3[32m [repeated 842x across cluster][0m
+[36m(RolloutWorker pid=938275)[0m 3[32m [repeated 838x across cluster][0m
+[36m(RolloutWorker pid=937160)[0m 1[32m [repeated 804x across cluster][0m
+[36m(RolloutWorker pid=937176)[0m 3[32m [repeated 814x across cluster][0m
+[36m(RolloutWorker pid=937178)[0m 1[32m [repeated 793x across cluster][0m
+The agent encountered 59 episodes this iteration...
+slurmstepd-dh-node12: error: *** JOB 129283 ON dh-node12 CANCELLED AT 2023-11-27T22:06:36 ***

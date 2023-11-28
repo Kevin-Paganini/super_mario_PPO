@@ -39,9 +39,9 @@ ACTIONS = [
     [WindowEvent.RELEASE_ARROW_LEFT]
 ]
 
-NUM_WORKERS = 1
+NUM_WORKERS = os.cpu_count() - 5
 print(os.cpu_count())
-TICK_RANGE = 10
+TICK_RANGE = 5
 
 #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 #Define a class that specifies a corridor environment
@@ -149,12 +149,14 @@ def train():
             model={
             "dim": (16, 20),
             
-            "conv_filters": [[64, [2, 2], 1], [64, [4, 4], 1]],
+            "conv_filters": [[1024, [4, 4], 1], [1024, [4, 4], 1]],
             
             },
             train_batch_size=4096, 
             num_sgd_iter=2048, 
-            sgd_minibatch_size=1024)
+            sgd_minibatch_size=1024,
+            vf_clip_param=100,
+            lr=1e-2)
         .rollouts(num_rollout_workers=NUM_WORKERS)
         .resources(num_gpus=int(os.environ.get("RLLIB_NUM_GPUS", "0")))
         .rl_module(_enable_rl_module_api=False)  # Deactivate RLModule API
@@ -162,7 +164,6 @@ def train():
         
         
     )
-    config.lr = 1e-3    #set the learning rate?
 
     stop = {
         "training_iteration": 1000,    #set the number of training iterations

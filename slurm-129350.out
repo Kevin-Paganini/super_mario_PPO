@@ -1,0 +1,64 @@
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: rllib in /home/paganinik/.local/lib/python3.6/site-packages (0.0.1)
+Requirement already satisfied: ray in /home/paganinik/.local/lib/python3.6/site-packages (2.4.0)
+Requirement already satisfied: gymnasium in /home/paganinik/.local/lib/python3.6/site-packages (0.26.3)
+Requirement already satisfied: dm_tree in /home/paganinik/.local/lib/python3.6/site-packages (0.1.8)
+Requirement already satisfied: pyboy in /home/paganinik/.local/lib/python3.6/site-packages (1.4.7)
+Requirement already satisfied: pysdl2 in /home/paganinik/.local/lib/python3.6/site-packages (0.9.16)
+Requirement already satisfied: pysdl2-dll in /home/paganinik/.local/lib/python3.6/site-packages (2.28.4)
+Requirement already satisfied: tensorflow-probability in /home/paganinik/.local/lib/python3.6/site-packages (0.19.0)
+Requirement already satisfied: virtualenv<20.21.1,>=20.0.24 in /home/paganinik/.local/lib/python3.6/site-packages (from ray) (20.17.1)
+Requirement already satisfied: filelock in /home/paganinik/.local/lib/python3.6/site-packages (from ray) (3.4.1)
+Requirement already satisfied: grpcio<=1.51.3,>=1.32.0 in /opt/conda/lib/python3.6/site-packages (from ray) (1.33.2)
+Requirement already satisfied: requests in /opt/conda/lib/python3.6/site-packages (from ray) (2.24.0)
+Requirement already satisfied: aiosignal in /home/paganinik/.local/lib/python3.6/site-packages (from ray) (1.2.0)
+Requirement already satisfied: click>=7.0 in /opt/conda/lib/python3.6/site-packages (from ray) (7.1.2)
+Requirement already satisfied: frozenlist in /home/paganinik/.local/lib/python3.6/site-packages (from ray) (1.2.0)
+Requirement already satisfied: dataclasses in /home/paganinik/.local/lib/python3.6/site-packages (from ray) (0.8)
+Requirement already satisfied: typing-extensions in /opt/conda/lib/python3.6/site-packages (from ray) (3.7.4.3)
+Requirement already satisfied: numpy>=1.16 in /home/paganinik/.local/lib/python3.6/site-packages (from ray) (1.19.0)
+Requirement already satisfied: msgpack<2.0.0,>=1.0.0 in /home/paganinik/.local/lib/python3.6/site-packages (from ray) (1.0.5)
+Requirement already satisfied: pyyaml in /opt/conda/lib/python3.6/site-packages (from ray) (5.3.1)
+Requirement already satisfied: protobuf!=3.19.5,>=3.15.3 in /home/paganinik/.local/lib/python3.6/site-packages (from ray) (3.19.6)
+Requirement already satisfied: attrs in /opt/conda/lib/python3.6/site-packages (from ray) (20.2.0)
+Requirement already satisfied: jsonschema in /opt/conda/lib/python3.6/site-packages (from ray) (3.0.2)
+Requirement already satisfied: cloudpickle>=1.2.0 in /home/paganinik/.local/lib/python3.6/site-packages (from gymnasium) (2.2.1)
+Requirement already satisfied: gymnasium-notices>=0.0.1 in /home/paganinik/.local/lib/python3.6/site-packages (from gymnasium) (0.0.1)
+Requirement already satisfied: importlib-metadata>=4.8.0 in /home/paganinik/.local/lib/python3.6/site-packages (from gymnasium) (4.8.3)
+Requirement already satisfied: pillow in /home/paganinik/.local/lib/python3.6/site-packages (from pyboy) (8.4.0)
+Requirement already satisfied: cython>=0.29.16 in /home/paganinik/.local/lib/python3.6/site-packages (from pyboy) (3.0.6)
+Requirement already satisfied: six>=1.10.0 in /opt/conda/lib/python3.6/site-packages (from tensorflow-probability) (1.15.0)
+Requirement already satisfied: decorator in /opt/conda/lib/python3.6/site-packages (from tensorflow-probability) (4.4.2)
+Requirement already satisfied: gast>=0.3.2 in /home/paganinik/.local/lib/python3.6/site-packages (from tensorflow-probability) (0.5.4)
+Requirement already satisfied: absl-py in /opt/conda/lib/python3.6/site-packages (from tensorflow-probability) (0.11.0)
+Requirement already satisfied: zipp>=0.5 in /opt/conda/lib/python3.6/site-packages (from importlib-metadata>=4.8.0->gymnasium) (3.4.0)
+Requirement already satisfied: distlib<1,>=0.3.6 in /home/paganinik/.local/lib/python3.6/site-packages (from virtualenv<20.21.1,>=20.0.24->ray) (0.3.7)
+Requirement already satisfied: importlib-resources>=5.4 in /home/paganinik/.local/lib/python3.6/site-packages (from virtualenv<20.21.1,>=20.0.24->ray) (5.4.0)
+Requirement already satisfied: platformdirs<3,>=2.4 in /home/paganinik/.local/lib/python3.6/site-packages (from virtualenv<20.21.1,>=20.0.24->ray) (2.4.0)
+Requirement already satisfied: setuptools in /opt/conda/lib/python3.6/site-packages (from jsonschema->ray) (59.6.0)
+Requirement already satisfied: pyrsistent>=0.14.0 in /opt/conda/lib/python3.6/site-packages (from jsonschema->ray) (0.17.3)
+Requirement already satisfied: certifi>=2017.4.17 in /opt/conda/lib/python3.6/site-packages (from requests->ray) (2020.6.20)
+Requirement already satisfied: chardet<4,>=3.0.2 in /opt/conda/lib/python3.6/site-packages (from requests->ray) (3.0.4)
+Requirement already satisfied: idna<3,>=2.5 in /opt/conda/lib/python3.6/site-packages (from requests->ray) (2.9)
+Requirement already satisfied: urllib3!=1.25.0,!=1.25.1,<1.26,>=1.21.1 in /opt/conda/lib/python3.6/site-packages (from requests->ray) (1.25.11)
+/home/paganinik/.local/lib/python3.6/site-packages/gymnasium/core.py:27: UserWarning: [33mWARN: Gymnasium minimally supports python 3.6 as the python foundation not longer supports the version, please update your version to 3.7+[0m
+  "Gymnasium minimally supports python 3.6 as the python foundation not longer supports the version, please update your version to 3.7+"
+lz4 not available, disabling sample compression. This will significantly impact RLlib performance. To install lz4, run `pip install lz4`.
+UserWarning: Using SDL2 binaries from pysdl2-dll 2.28.4
+2023-11-28 00:19:46,763	INFO worker.py:1625 -- Started a local Ray instance.
+2023-11-28 00:20:17,060	INFO tensorboardx.py:42 -- pip install "ray[tune]" to see TensorBoard files.
+2023-11-28 00:20:17,060	WARNING unified.py:55 -- Could not instantiate TBXLogger: No module named 'tensorboardX'.
+2023-11-28 00:20:17,063	INFO algorithm.py:528 -- Current log_level is WARN. For more information, set 'log_level': 'INFO' / 'DEBUG' or use the -v and -vv flags.
+[2m[36m(pid=1113046)[0m /home/paganinik/.local/lib/python3.6/site-packages/gymnasium/core.py:27: UserWarning: [33mWARN: Gymnasium minimally supports python 3.6 as the python foundation not longer supports the version, please update your version to 3.7+[0m
+[2m[36m(pid=1113046)[0m   "Gymnasium minimally supports python 3.6 as the python foundation not longer supports the version, please update your version to 3.7+"
+[2m[36m(pid=1113165)[0m /home/paganinik/.local/lib/python3.6/site-packages/gymnasium/core.py:27: UserWarning: [33mWARN: Gymnasium minimally supports python 3.6 as the python foundation not longer supports the version, please update your version to 3.7+[0m[32m [repeated 39x across cluster] (Ray deduplicates logs by default. Set RAY_DEDUP_LOGS=0 to disable log deduplication, or see https://docs.ray.io/en/master/ray-observability/ray-logging.html#log-deduplication for more options.)[0m
+[2m[36m(pid=1113165)[0m   "Gymnasium minimally supports python 3.6 as the python foundation not longer supports the version, please update your version to 3.7+"[32m [repeated 39x across cluster][0m
+[2m[36m(pid=1113046)[0m 2023-11-28 00:20:55,410	WARNING compression.py:17 -- lz4 not available, disabling sample compression. This will significantly impact RLlib performance. To install lz4, run `pip install lz4`.
+[2m[36m(pid=1113091)[0m /home/paganinik/.local/lib/python3.6/site-packages/gymnasium/core.py:27: UserWarning: [33mWARN: Gymnasium minimally supports python 3.6 as the python foundation not longer supports the version, please update your version to 3.7+[0m[32m [repeated 27x across cluster][0m
+[2m[36m(pid=1113091)[0m   "Gymnasium minimally supports python 3.6 as the python foundation not longer supports the version, please update your version to 3.7+"[32m [repeated 27x across cluster][0m
+[2m[36m(pid=1113102)[0m 2023-11-28 00:21:00,342	WARNING compression.py:17 -- lz4 not available, disabling sample compression. This will significantly impact RLlib performance. To install lz4, run `pip install lz4`.[32m [repeated 22x across cluster][0m
+[2m[36m(RolloutWorker pid=1113045)[0m 2023-11-28 00:21:17,090	WARNING env.py:156 -- Your env doesn't have a .spec.max_episode_steps attribute. Your horizon will default to infinity, and your environment will not be reset.
+[2m[36m(pid=1113091)[0m 2023-11-28 00:21:02,436	WARNING compression.py:17 -- lz4 not available, disabling sample compression. This will significantly impact RLlib performance. To install lz4, run `pip install lz4`.[32m [repeated 44x across cluster][0m
+2023-11-28 00:21:23,247	INFO trainable.py:176 -- Trainable.setup took 66.187 seconds. If your trainable is slow to initialize, consider setting reuse_actors=True to reduce actor creation overheads.
+2023-11-28 00:21:23,248	WARNING util.py:67 -- Install gputil for GPU system monitoring.
+slurmstepd-dh-node7: error: *** JOB 129350 ON dh-node7 CANCELLED AT 2023-11-28T00:22:02 ***
