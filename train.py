@@ -152,9 +152,9 @@ def train():
             "conv_filters": [[64, [2, 2], 1], [64, [4, 4], 1]],
             
             },
-            train_batch_size=4096, 
-            num_sgd_iter=256, 
-            sgd_minibatch_size=128)
+            train_batch_size=64, 
+            num_sgd_iter=32, 
+            sgd_minibatch_size=16)
         .rollouts(num_rollout_workers=NUM_WORKERS)
         .resources(num_gpus=int(os.environ.get("RLLIB_NUM_GPUS", "0")))
         .rl_module(_enable_rl_module_api=False)  # Deactivate RLModule API
@@ -182,8 +182,8 @@ def train():
         if iteration % 5 == 0:
             os.makedirs(os.path.join(os.getcwd(), 'trained', f'{iteration}'), exist_ok=True)
             checkpoint_path = algo.save(os.path.join(os.getcwd(), 'trained', f'{iteration}'))
-            steps_trained = checkpoint_path.metrics['info']['learner']['default_policy']['num_agent_steps_trained']
-            sample_results = checkpoint_path.metrics['sampler_results']
+            steps_trained = result['info']['learner']['default_policy']['num_agent_steps_trained']
+            sample_results = result['sampler_results']
             print(f"Model saved at iteration {iteration}, steps trained: {steps_trained}, sample results: {sample_results}")
             with open(os.path.join(os.getcwd(), 'stats.txt'), 'a') as f:
                 f.write(f"Model saved at iteration {iteration}, steps trained: {steps_trained}, sample results: {sample_results}\n")
