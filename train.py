@@ -36,7 +36,8 @@ ACTIONS = [
     [WindowEvent.PRESS_BUTTON_A, WindowEvent.PRESS_ARROW_RIGHT],
     [WindowEvent.PRESS_BUTTON_A, WindowEvent.PRESS_ARROW_LEFT],
     [WindowEvent.RELEASE_ARROW_RIGHT],
-    [WindowEvent.RELEASE_ARROW_LEFT]
+    [WindowEvent.RELEASE_ARROW_LEFT],
+    [None]
 ]
 
 NUM_WORKERS = os.cpu_count() - 5
@@ -82,7 +83,7 @@ class SuperMarioGym(gym.Env):
         assert self.mario.lives_left == 2
         assert self.mario.time_left == 400
         assert self.mario.world == (1, 1)
-        self.previous_progress = 0
+        self.previous_progress = 251
 
         self.last_lives_left = self.mario.lives_left
         
@@ -90,16 +91,21 @@ class SuperMarioGym(gym.Env):
         return np.array(self.mario.game_area(), dtype=np.float32).reshape((20, 16)), {}
 
     def step(self, action):
-        print(action)
         done = False
-        str_action = ACTIONS[action]
-        if len(str_action) > 1:
-            
-            self.pyboy.send_input(str_action[0])
-            self.pyboy.send_input(str_action[1])
-        else:
-            self.pyboy.send_input(str_action[0])
         
+        # Implementing action
+        str_action = ACTIONS[action]
+        
+        if str_action != [None]:
+            if len(str_action) > 1:
+                
+                self.pyboy.send_input(str_action[0])
+                self.pyboy.send_input(str_action[1])
+            else:
+                self.pyboy.send_input(str_action[0])
+        
+        
+        # Ticking TICK_RANGE ticks ahead
         for i in range(TICK_RANGE):
             if self.mario.lives_left <= 0:
                 done = True
@@ -107,11 +113,14 @@ class SuperMarioGym(gym.Env):
                 self.last_lives_left = self.mario.lives_left
             self.pyboy.tick()
         
+        
+        # Releasing pressed button
         if WindowEvent.PRESS_BUTTON_A in str_action:
             self.pyboy.send_input(WindowEvent.RELEASE_BUTTON_A)
         
+        # Calculating Reward
         # Need something to get it to actually move to the right
-        reward = self.mario.level_progress - 251 # where mario starts
+        reward = 0.4 * (self.mario.level_progress - self.previous_progress) + 0.6 * self.mario.score + self.mario.lives_left * 100 # where mario starts
         if self.mario.level_progress <= self.previous_progress:
             reward = reward * 0.98
         else:
@@ -147,16 +156,17 @@ def train():
         .framework("torch")
         .training(
             model={
-            "dim": (16, 20),
+            "dim": (20, 16),
             
             "conv_filters": [[1024, [4, 4], 1], [1024, [4, 4], 1]],
+            
             
             },
             train_batch_size=4096, 
             num_sgd_iter=2048, 
             sgd_minibatch_size=1024,
             vf_clip_param=100,
-            lr=1e-2)
+            lr=1e-3)
         .rollouts(num_rollout_workers=NUM_WORKERS)
         .resources(num_gpus=int(os.environ.get("RLLIB_NUM_GPUS", "0")))
         .rl_module(_enable_rl_module_api=False)  # Deactivate RLModule API
