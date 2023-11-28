@@ -22,6 +22,7 @@ pyboy.set_emulation_speed(0)
 assert pyboy.cartridge_title() == "SUPER MARIOLAN"
 
 mario = pyboy.game_wrapper()
+mario.set_world_level(1, 1)
 mario.start_game() 
 
 
@@ -31,26 +32,15 @@ def generate_episode():
     assert mario.score == 0
     assert mario.lives_left == 2
     assert mario.time_left == 400
-    assert mario.world == (1, 1)
     last_lives_left = mario.lives_left
-
     print('falalala', dir(mario), 'falalalala')
     print('Bot view: ', np.array(mario.game_area()))   
-    # pyboy.send_input(WindowEvent.PRESS_ARROW_UP)
-    # for i in range(1000):
-    #     print(mario.level_progress)
-    #     if mario.lives_left < last_lives_left:
-    #         print('Fitness', mario.fitness, 'Fitness last', last_lives_left)
-    #         break
-    #     else:
-    #         last_lives_left = mario.lives_left
-            
-    #         if i % 100 == 60:
-    #             pyboy.send_input(WindowEvent.PRESS_BUTTON_A)
-    #         # if i % 100 == 0:
-    #         #     pyboy.send_input(WindowEvent.RELEASE_BUTTON_A)
+    while mario.lives_left > 0:
+        
+        
 
-    #     pyboy.tick()
+
+        pyboy.tick()
         
     
 

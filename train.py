@@ -70,7 +70,7 @@ class SuperMarioGym(gym.Env):
         self.previous_progress = 0
         
         self.action_space = Discrete(len(ACTIONS))    #set the nature of the action space
-        self.observation_space = Box(0.0, 500, shape=(16,20), dtype=np.float32)    #the state space -- just the position in the corridor
+        self.observation_space = Box(0.0, 500, shape=(20,16), dtype=np.float32)    #the state space -- just the position in the corridor
         self.reset(seed=8)    # Set the seed. This is only used for the final (reach goal) reward.
 
 
@@ -87,7 +87,7 @@ class SuperMarioGym(gym.Env):
         self.last_lives_left = self.mario.lives_left
         
         
-        return np.array(self.mario.game_area(), dtype=np.float32).reshape((16, 20)), {}
+        return np.array(self.mario.game_area(), dtype=np.float32).reshape((20, 16)), {}
 
     def step(self, action):
         print(action)
@@ -101,7 +101,7 @@ class SuperMarioGym(gym.Env):
             self.pyboy.send_input(str_action[0])
         
         for i in range(TICK_RANGE):
-            if self.mario.lives_left < self.last_lives_left:
+            if self.mario.lives_left <= 0:
                 done = True
             else:
                 self.last_lives_left = self.mario.lives_left
@@ -113,14 +113,14 @@ class SuperMarioGym(gym.Env):
         # Need something to get it to actually move to the right
         reward = self.mario.level_progress - 251 # where mario starts
         if self.mario.level_progress <= self.previous_progress:
-            reward = reward * 0.9
+            reward = reward * 0.98
         else:
-            reward = reward * 1.1
+            reward = reward * 1.02
         
         self.previous_progress = self.mario.level_progress
         
         return (
-            np.array(self.mario.game_area(), dtype=np.float32).reshape((16, 20)),    #the current state
+            np.array(self.mario.game_area(), dtype=np.float32).reshape((20, 16)),    #the current state
             reward,    #generate a random reward if done otherwise accumulate -0.1
             done,    #record whether the agent has reached the end point
             False,   #""
@@ -152,9 +152,9 @@ def train():
             "conv_filters": [[64, [2, 2], 1], [64, [4, 4], 1]],
             
             },
-            train_batch_size=64, 
-            num_sgd_iter=32, 
-            sgd_minibatch_size=16)
+            train_batch_size=4096, 
+            num_sgd_iter=2048, 
+            sgd_minibatch_size=1024)
         .rollouts(num_rollout_workers=NUM_WORKERS)
         .resources(num_gpus=int(os.environ.get("RLLIB_NUM_GPUS", "0")))
         .rl_module(_enable_rl_module_api=False)  # Deactivate RLModule API
@@ -165,7 +165,7 @@ def train():
     config.lr = 1e-3    #set the learning rate?
 
     stop = {
-        "training_iteration": 100,    #set the number of training iterations
+        "training_iteration": 1000,    #set the number of training iterations
         "timesteps_total": 10,    #set the total number of timesteps
         "episode_reward_mean": 0.1    #set the average reward that will stop training once achieved
     }
@@ -173,9 +173,10 @@ def train():
     algo = config.build()    #build the algorithm using the config
     # Create a PPOTrainer and load the saved model
 
-    # algo.restore(os.path.join(os.getcwd(), 'trained', 'simple_350'))
+    # algo.restore(os.path.join(os.getcwd(), 'trained', 'test_3_40'))
     # print(dir(algo))
     # algo.config['num_rollout_workers'] = 1
+    
     for iteration in range(stop['training_iteration']):    #loop over training iterations
         result = algo.train()    #take a training step
         print('The agent encountered',result['episodes_this_iter'],'episodes this iteration...')
