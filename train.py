@@ -40,7 +40,8 @@ ACTIONS = [
     [None]
 ]
 
-NUM_WORKERS = os.cpu_count() - 5
+# NUM_WORKERS = os.cpu_count() - 5
+NUM_WORKERS = 1
 print(os.cpu_count())
 TICK_RANGE = 5
 
@@ -121,6 +122,8 @@ class SuperMarioGym(gym.Env):
         # Calculating Reward
         # Need something to get it to actually move to the right
         reward = 0.4 * (self.mario.level_progress - self.previous_progress) + 0.6 * self.mario.score + self.mario.lives_left * 100 # where mario starts
+        if action == 1:
+            reward -= 100
         if self.mario.level_progress <= self.previous_progress:
             reward = reward * 0.98
         else:
@@ -184,9 +187,9 @@ def train():
     algo = config.build()    #build the algorithm using the config
     # Create a PPOTrainer and load the saved model
 
-    # algo.restore(os.path.join(os.getcwd(), 'trained', 'test_3_40'))
-    # print(dir(algo))
-    # algo.config['num_rollout_workers'] = 1
+    algo.restore(os.path.join(os.getcwd(), 'trained', 'test_5_do_nothing_35'))
+    print(dir(algo))
+    algo.config['num_rollout_workers'] = 1
     
     for iteration in range(stop['training_iteration']):    #loop over training iterations
         result = algo.train()    #take a training step
