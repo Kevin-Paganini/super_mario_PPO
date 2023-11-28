@@ -9,3 +9,7 @@ Second Experiment:
 Just stands still
 reward functio: self.mario.level_progress
 maybe the learning rate is too high
+
+maybe we can add a do nothing button for the bot
+
+stitch five frames together I think
