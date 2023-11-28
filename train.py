@@ -173,9 +173,9 @@ def train():
     algo = config.build()    #build the algorithm using the config
     # Create a PPOTrainer and load the saved model
 
-    algo.restore(os.path.join(os.getcwd(), 'trained', 'simple_80'))
-    print(dir(algo))
-    algo.config['num_rollout_workers'] = 1
+    # algo.restore(os.path.join(os.getcwd(), 'trained', 'simple_350'))
+    # print(dir(algo))
+    # algo.config['num_rollout_workers'] = 1
     for iteration in range(stop['training_iteration']):    #loop over training iterations
         result = algo.train()    #take a training step
         print('The agent encountered',result['episodes_this_iter'],'episodes this iteration...')
