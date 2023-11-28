@@ -39,7 +39,7 @@ ACTIONS = [
     [WindowEvent.RELEASE_ARROW_LEFT]
 ]
 
-NUM_WORKERS = 2
+NUM_WORKERS = 1
 print(os.cpu_count())
 TICK_RANGE = 10
 
@@ -67,7 +67,7 @@ class SuperMarioGym(gym.Env):
         
         
         
-        
+        self.previous_progress = 0
         
         self.action_space = Discrete(len(ACTIONS))    #set the nature of the action space
         self.observation_space = Box(0.0, 500, shape=(16,20), dtype=np.float32)    #the state space -- just the position in the corridor
@@ -82,12 +82,15 @@ class SuperMarioGym(gym.Env):
         assert self.mario.lives_left == 2
         assert self.mario.time_left == 400
         assert self.mario.world == (1, 1)
+        self.previous_progress = 0
+
         self.last_lives_left = self.mario.lives_left
         
         
         return np.array(self.mario.game_area(), dtype=np.float32).reshape((16, 20)), {}
 
     def step(self, action):
+        print(action)
         done = False
         str_action = ACTIONS[action]
         if len(str_action) > 1:
@@ -107,8 +110,14 @@ class SuperMarioGym(gym.Env):
         if WindowEvent.PRESS_BUTTON_A in str_action:
             self.pyboy.send_input(WindowEvent.RELEASE_BUTTON_A)
         
+        # Need something to get it to actually move to the right
+        reward = self.mario.level_progress - 251 # where mario starts
+        if self.mario.level_progress <= self.previous_progress:
+            reward = reward * 0.9
+        else:
+            reward = reward * 1.1
         
-        reward = 0.5 * self.mario.score + 0.5 * self.mario.level_progress + 10 * self.mario.time_left
+        self.previous_progress = self.mario.level_progress
         
         return (
             np.array(self.mario.game_area(), dtype=np.float32).reshape((16, 20)),    #the current state
@@ -146,7 +155,7 @@ def train():
             train_batch_size=4096, 
             num_sgd_iter=256, 
             sgd_minibatch_size=128)
-        .rollouts(num_rollout_workers=4)
+        .rollouts(num_rollout_workers=NUM_WORKERS)
         .resources(num_gpus=int(os.environ.get("RLLIB_NUM_GPUS", "0")))
         .rl_module(_enable_rl_module_api=False)  # Deactivate RLModule API
         .training(_enable_learner_api=False)  # Deactivate RLModule API
@@ -156,14 +165,17 @@ def train():
     config.lr = 1e-3    #set the learning rate?
 
     stop = {
-        "training_iteration": 50,    #set the number of training iterations
+        "training_iteration": 100,    #set the number of training iterations
         "timesteps_total": 10,    #set the total number of timesteps
         "episode_reward_mean": 0.1    #set the average reward that will stop training once achieved
     }
     
     algo = config.build()    #build the algorithm using the config
-    
-    
+    # Create a PPOTrainer and load the saved model
+
+    algo.restore(os.path.join(os.getcwd(), 'trained', 'simple_80'))
+    print(dir(algo))
+    algo.config['num_rollout_workers'] = 1
     for iteration in range(stop['training_iteration']):    #loop over training iterations
         result = algo.train()    #take a training step
         print('The agent encountered',result['episodes_this_iter'],'episodes this iteration...')
