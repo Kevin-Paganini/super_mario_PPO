@@ -2,5 +2,7 @@ __pycache__
 policies
 trained
 venv
-trained_traditional/*
+trained_traditional
 slurm*
+stats*
+stats_traditional*
