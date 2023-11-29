@@ -68,6 +68,7 @@ class SuperMarioGym(gym.Env):
         self.mario.start_game() 
         
         
+        self.previous_reward = 0
         
         self.previous_progress = 0
         
@@ -85,7 +86,7 @@ class SuperMarioGym(gym.Env):
         assert self.mario.time_left == 400
         assert self.mario.world == (1, 1)
         self.previous_progress = 251
-
+        self.previous_reward = 0
         self.last_lives_left = self.mario.lives_left
         
         
@@ -107,10 +108,14 @@ class SuperMarioGym(gym.Env):
         
         
         # Ticking TICK_RANGE ticks ahead
+        lost_life = False
         for i in range(TICK_RANGE):
             if self.mario.lives_left <= 0:
                 done = True
             else:
+                if self.mario.lives_left < self.last_lives_left:
+                    lost_life = True
+                    
                 self.last_lives_left = self.mario.lives_left
             self.pyboy.tick()
         
@@ -121,16 +126,28 @@ class SuperMarioGym(gym.Env):
         
         # Calculating Reward
         # Need something to get it to actually move to the right
-        reward = 0.4 * (self.mario.level_progress - self.previous_progress) + 0.6 * self.mario.score + self.mario.lives_left * 100 # where mario starts
-        if action == 1:
-            reward -= 100
-        if self.mario.level_progress <= self.previous_progress:
-            reward = reward * 0.98
-        else:
-            reward = reward * 1.02
+        # reward = 0.8 * (self.mario.level_progress - self.previous_progress) + 0.2 * self.mario.score + self.mario.lives_left * 100 # where mario starts
+        # if action == 1:
+        #     reward -= 50
+        # if self.mario.level_progress <= self.previous_progress:
+        #     reward = reward * 0.98
+        # else:
+        #     reward = reward * 1.02
         
-        self.previous_progress = self.mario.level_progress
+        # if lost_life:
+        #     reward = -10000
+            
+        # if reward == self.previous_reward:
+        #     reward *= 0.8
+        #     self.previous_reward = reward
+        # else:
+        #     self.previous_reward = reward
         
+        # self.previous_progress = self.mario.level_progress
+        
+        reward = self.mario.fitness
+        
+        # print(reward)
         return (
             np.array(self.mario.game_area(), dtype=np.float32).reshape((20, 16)),    #the current state
             reward,    #generate a random reward if done otherwise accumulate -0.1
@@ -187,7 +204,7 @@ def train():
     algo = config.build()    #build the algorithm using the config
     # Create a PPOTrainer and load the saved model
 
-    algo.restore(os.path.join(os.getcwd(), 'trained', 'test_5_do_nothing_35'))
+    algo.restore(os.path.join(os.getcwd(), 'trained', '125'))
     print(dir(algo))
     algo.config['num_rollout_workers'] = 1
     
@@ -195,12 +212,12 @@ def train():
         result = algo.train()    #take a training step
         print('The agent encountered',result['episodes_this_iter'],'episodes this iteration...')
         if iteration % 5 == 0:
-            os.makedirs(os.path.join(os.getcwd(), 'trained', f'{iteration}'), exist_ok=True)
-            checkpoint_path = algo.save(os.path.join(os.getcwd(), 'trained', f'{iteration}'))
+            os.makedirs(os.path.join(os.getcwd(), 'trained_traditional', f'{iteration}'), exist_ok=True)
+            checkpoint_path = algo.save(os.path.join(os.getcwd(), 'trained_traditional', f'{iteration}'))
             steps_trained = result['info']['learner']['default_policy']['num_agent_steps_trained']
             sample_results = result['sampler_results']
             print(f"Model saved at iteration {iteration}, steps trained: {steps_trained}, sample results: {sample_results}")
-            with open(os.path.join(os.getcwd(), 'stats.txt'), 'a') as f:
+            with open(os.path.join(os.getcwd(), 'stats_traditional.txt'), 'a') as f:
                 f.write(f"Model saved at iteration {iteration}, steps trained: {steps_trained}, sample results: {sample_results}\n")
 
     algo.stop()    #release the training resources

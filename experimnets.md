@@ -15,3 +15,9 @@ maybe we can add a do nothing button for the bot
 stitch five frames together I think
 
 added a do nothing button
+
+could we do a different game representation than game area?
+
+if it stays in the same area punish it
+
+test 7 shows being confused between getting upgrade or progressing right
