@@ -204,7 +204,7 @@ def train():
     algo = config.build()    #build the algorithm using the config
     # Create a PPOTrainer and load the saved model
 
-    algo.restore(os.path.join(os.getcwd(), 'trained', '125'))
+    algo.restore(os.path.join(os.getcwd(), 'trained', 'test_8_traditional_2_55'))
     print(dir(algo))
     algo.config['num_rollout_workers'] = 1
     
