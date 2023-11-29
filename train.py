@@ -208,6 +208,7 @@ def train():
         "episode_reward_mean": 0.1    #set the average reward that will stop training once achieved
     }
     
+    
     algo = config.build()    #build the algorithm using the config
     # Create a PPOTrainer and load the saved model
 
