@@ -211,10 +211,10 @@ def train():
     algo = config.build()    #build the algorithm using the config
     # Create a PPOTrainer and load the saved model
 
-    algo.restore(os.path.join(os.getcwd(), 'trained', 'test_8_traditional_2_55'))
+    algo.restore(os.path.join(os.getcwd(), 'trained_traditional', '70'))
 
 
-    algo.config['num_rollout_workers'] = 1
+    # algo.config['num_rollout_workers'] = 1
     
     for iteration in range(stop['training_iteration']):    #loop over training iterations
         result = algo.train()    #take a training step
