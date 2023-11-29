@@ -1,0 +1,48 @@
+13:4: not a valid test operator: (
+13:4: not a valid test operator: 530.30.02
+Defaulting to user installation because normal site-packages is not writeable
+WARNING: Ignoring invalid distribution -ransformers (/home/paganinik/.local/lib/python3.10/site-packages)
+WARNING: Ignoring invalid distribution -ransformers (/home/paganinik/.local/lib/python3.10/site-packages)
+Looking in indexes: https://pypi.org/simple, https://pypi.ngc.nvidia.com
+Requirement already satisfied: rllib in /home/paganinik/.local/lib/python3.10/site-packages (0.0.1)
+Requirement already satisfied: ray in /home/paganinik/.local/lib/python3.10/site-packages (2.8.0)
+Requirement already satisfied: gymnasium in /home/paganinik/.local/lib/python3.10/site-packages (0.29.1)
+Requirement already satisfied: dm_tree in /home/paganinik/.local/lib/python3.10/site-packages (0.1.8)
+Requirement already satisfied: pyboy in /home/paganinik/.local/lib/python3.10/site-packages (1.6.9)
+Requirement already satisfied: pysdl2 in /home/paganinik/.local/lib/python3.10/site-packages (0.9.16)
+Requirement already satisfied: pysdl2-dll in /home/paganinik/.local/lib/python3.10/site-packages (2.28.4)
+Requirement already satisfied: tensorflow-probability in /home/paganinik/.local/lib/python3.10/site-packages (0.23.0)
+Requirement already satisfied: click>=7.0 in /usr/local/lib/python3.10/dist-packages (from ray) (8.1.3)
+Requirement already satisfied: filelock in /usr/local/lib/python3.10/dist-packages (from ray) (3.12.0)
+Requirement already satisfied: jsonschema in /usr/local/lib/python3.10/dist-packages (from ray) (4.17.3)
+Requirement already satisfied: msgpack<2.0.0,>=1.0.0 in /usr/local/lib/python3.10/dist-packages (from ray) (1.0.5)
+Requirement already satisfied: packaging in /usr/local/lib/python3.10/dist-packages (from ray) (23.1)
+Requirement already satisfied: protobuf!=3.19.5,>=3.15.3 in /usr/local/lib/python3.10/dist-packages (from ray) (3.20.3)
+Requirement already satisfied: pyyaml in /usr/local/lib/python3.10/dist-packages (from ray) (6.0)
+Requirement already satisfied: aiosignal in /usr/local/lib/python3.10/dist-packages (from ray) (1.3.1)
+Requirement already satisfied: frozenlist in /usr/local/lib/python3.10/dist-packages (from ray) (1.3.3)
+Requirement already satisfied: requests in /usr/local/lib/python3.10/dist-packages (from ray) (2.29.0)
+Requirement already satisfied: numpy>=1.19.3 in /home/paganinik/.local/lib/python3.10/site-packages (from ray) (1.26.0)
+Requirement already satisfied: cloudpickle>=1.2.0 in /usr/local/lib/python3.10/dist-packages (from gymnasium) (2.2.1)
+Requirement already satisfied: typing-extensions>=4.3.0 in /usr/local/lib/python3.10/dist-packages (from gymnasium) (4.5.0)
+Requirement already satisfied: farama-notifications>=0.0.1 in /home/paganinik/.local/lib/python3.10/site-packages (from gymnasium) (0.0.4)
+Requirement already satisfied: absl-py in /usr/local/lib/python3.10/dist-packages (from tensorflow-probability) (1.4.0)
+Requirement already satisfied: six>=1.10.0 in /usr/local/lib/python3.10/dist-packages (from tensorflow-probability) (1.16.0)
+Requirement already satisfied: decorator in /usr/local/lib/python3.10/dist-packages (from tensorflow-probability) (5.1.1)
+Requirement already satisfied: gast>=0.3.2 in /usr/local/lib/python3.10/dist-packages (from tensorflow-probability) (0.4.0)
+Requirement already satisfied: attrs>=17.4.0 in /usr/local/lib/python3.10/dist-packages (from jsonschema->ray) (23.1.0)
+Requirement already satisfied: pyrsistent!=0.17.0,!=0.17.1,!=0.17.2,>=0.14.0 in /usr/local/lib/python3.10/dist-packages (from jsonschema->ray) (0.19.3)
+Requirement already satisfied: charset-normalizer<4,>=2 in /usr/local/lib/python3.10/dist-packages (from requests->ray) (3.1.0)
+Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.10/dist-packages (from requests->ray) (3.4)
+Requirement already satisfied: urllib3<1.27,>=1.21.1 in /usr/local/lib/python3.10/dist-packages (from requests->ray) (1.26.15)
+Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.10/dist-packages (from requests->ray) (2022.12.7)
+WARNING: Ignoring invalid distribution -ransformers (/home/paganinik/.local/lib/python3.10/site-packages)
+WARNING: Ignoring invalid distribution -ransformers (/home/paganinik/.local/lib/python3.10/site-packages)
+WARNING: Ignoring invalid distribution -ransformers (/home/paganinik/.local/lib/python3.10/site-packages)
+WARNING: Ignoring invalid distribution -ransformers (/home/paganinik/.local/lib/python3.10/site-packages)
+
+[notice] A new release of pip is available: 23.1.2 -> 23.3.1
+[notice] To update, run: python3 -m pip install --upgrade pip
+  File "/home/paganinik/super_mario_PPO/train.py", line 150
+    reward -= 1000
+TabError: inconsistent use of tabs and spaces in indentation
