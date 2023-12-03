@@ -40,8 +40,8 @@ ACTIONS = [
     [None]
 ]
 
-# NUM_WORKERS = 1
-NUM_WORKERS = os.cpu_count() - 5
+NUM_WORKERS = 1
+# NUM_WORKERS = os.cpu_count() - 5
 print(os.cpu_count())
 TICK_RANGE = 5
 
@@ -71,7 +71,8 @@ class SuperMarioGym(gym.Env):
         self.previous_reward = 0
         
         self.previous_progress = 0
-        
+        print('gggggggggg', self.mario.tiles_compressed.shape)
+        print('fffffffff', self.mario.tiles_minimal.shape)
         self.action_space = Discrete(len(ACTIONS))    #set the nature of the action space
         self.observation_space = Box(0.0, 500, shape=(20,16), dtype=np.float32)    #the state space -- just the position in the corridor
         self.reset(seed=8)    # Set the seed. This is only used for the final (reach goal) reward.
@@ -154,7 +155,7 @@ class SuperMarioGym(gym.Env):
         else:
             reward -= 2500
             self.previous_progress = self.mario.level_progress
-        # print(reward)
+        print(reward)
         return (
             np.array(self.mario.game_area(), dtype=np.float32).reshape((20, 16)),    #the current state
             reward,    #generate a random reward if done otherwise accumulate -0.1
@@ -211,11 +212,14 @@ def train():
     
     algo = config.build()    #build the algorithm using the config
     # Create a PPOTrainer and load the saved model
+    # test 11 185 good too
+    # Best model rn test_15_dead_bad_215
+    # good to test_16_level_reward_80
+    #new best test_18_lev_prog_275
+    algo.restore(os.path.join(os.getcwd(), 'trained', 'test_18_lev_prog_370'))
 
-    algo.restore(os.path.join(os.getcwd(), 'trained_traditional', '70'))
 
-
-    # algo.config['num_rollout_workers'] = 1
+    algo.config['num_rollout_workers'] = 1
     
     for iteration in range(stop['training_iteration']):    #loop over training iterations
         result = algo.train()    #take a training step
