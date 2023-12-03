@@ -66,8 +66,9 @@ class SuperMarioGym(gym.Env):
 
         self.mario = self.pyboy.game_wrapper()
         self.mario.start_game() 
+        self.previous_world = self.mario.world
         
-        
+        self.previous_actions = []
         self.previous_reward = 0
         
         self.previous_progress = 0
@@ -97,8 +98,14 @@ class SuperMarioGym(gym.Env):
         done = False
         
         # Implementing action
+        self.previous_actions.append(action)
         str_action = ACTIONS[action]
-        
+        if len(self.previous_actions) > 30:
+
+            if len(set(self.previous_actions[-25:])) == 1:
+                action = np.random.randint(1, 7)
+                str_action = ACTIONS[action]
+
         if str_action != [None]:
             if len(str_action) > 1:
                 
@@ -127,35 +134,39 @@ class SuperMarioGym(gym.Env):
         
         # Calculating Reward
         # Need something to get it to actually move to the right
-        # reward = 0.8 * (self.mario.level_progress - self.previous_progress) + 0.2 * self.mario.score + self.mario.lives_left * 100 # where mario starts
-        # if action == 1:
-        #     reward -= 50
-        # if self.mario.level_progress <= self.previous_progress:
-        #     reward = reward * 0.98
-        # else:
-        #     reward = reward * 1.02
-        
-        # if lost_life:
-        #     reward = -10000
-            
-        # if reward == self.previous_reward:
-        #     reward *= 0.8
-        #     self.previous_reward = reward
-        # else:
-        #     self.previous_reward = reward
-        
-        
-        
-        reward = self.mario.fitness + 100 * (self.mario.level_progress - self.previous_progress) + 50 * self.mario.time_left
+        reward = 0.75 * (self.mario.level_progress - self.previous_progress) + (0.25 * self.mario.score + self.mario.lives_left * 100) + (15 * self.mario.time_left) # where mario starts
         if action == 1:
-            reward -= 1000
-        if self.mario.level_progress > self.previous_progress + 10:
-
-            self.previous_progress = self.mario.level_progress
+            reward -= 50
+        if self.mario.level_progress <= self.previous_progress:
+            reward = reward * 0.95
         else:
-            reward -= 2500
+            reward = reward * 1.05
             self.previous_progress = self.mario.level_progress
-        print(reward)
+        
+        if lost_life or done:
+            reward = -1000000
+        # This dont actually do anything cause of timer
+        if reward == self.previous_reward:
+            reward *= 0.8
+            self.previous_reward = reward
+        else:
+            self.previous_reward = reward
+        
+        if self.mario.world != self.previous_world:
+            reward = 1000000
+            self.previous_world = self.mario.world        
+        
+        
+        #reward = self.mario.fitness + 100 * (self.mario.level_progress - self.previous_progress) + 50 * self.mario.time_left
+        #if action == 1:
+        #    reward -= 1000
+        #if self.mario.level_progress > self.previous_progress + 10:
+
+        #    self.previous_progress = self.mario.level_progress
+        #else:
+        #    reward -= 2500
+        #    self.previous_progress = self.mario.level_progress
+        # print(reward)
         return (
             np.array(self.mario.game_area(), dtype=np.float32).reshape((20, 16)),    #the current state
             reward,    #generate a random reward if done otherwise accumulate -0.1
@@ -194,7 +205,7 @@ def train():
             num_sgd_iter=2048, 
             sgd_minibatch_size=1024,
             vf_clip_param=100,
-            lr=1e-3)
+            lr=1e-8)
         .rollouts(num_rollout_workers=NUM_WORKERS)
         .resources(num_gpus=int(os.environ.get("RLLIB_NUM_GPUS", "0")))
         .rl_module(_enable_rl_module_api=False)  # Deactivate RLModule API
