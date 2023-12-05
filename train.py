@@ -180,12 +180,11 @@ class SuperMarioGym(gym.Env):
         if self.mario.world != self.previous_world:
             reward = 1000000
             self.previous_world = self.mario.world    
-            
+            self.previous_max_progress = 0
         # If it died default to negative reward
         if lost_life:
             reward = -1000000  
-            self.previous_max_progress = 251
-            
+            self.previous_max_progress = 0
         # If mario is stuck kill the episode and return a really negative reward
         if count_false > 400:
             reward = -1000000
