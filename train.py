@@ -40,8 +40,8 @@ ACTIONS = [
     [None]
 ]
 
-# NUM_WORKERS = 1
-NUM_WORKERS = os.cpu_count() - 2
+NUM_WORKERS = 1
+# NUM_WORKERS = os.cpu_count() - 2
 print(os.cpu_count())
 TICK_RANGE = 5
 
@@ -184,6 +184,7 @@ class SuperMarioGym(gym.Env):
         # If it died default to negative reward
         if lost_life:
             reward = -1000000  
+            self.previous_max_progress = 251
             
         # If mario is stuck kill the episode and return a really negative reward
         if count_false > 400:
@@ -226,7 +227,7 @@ def train():
             
             
             },
-            train_batch_size=4096, 
+            train_batch_size=10000000, 
             num_sgd_iter=2048, 
             sgd_minibatch_size=1024,
             vf_clip_param=100,
@@ -254,10 +255,12 @@ def train():
     # Best model rn test_15_dead_bad_215
     # good to test_16_level_reward_80
     #new best test_18_lev_prog_275
-    algo.restore(os.path.join(os.getcwd(), 'trained', 'test_18_lev_prog_275'))
+    # new best test_19_exp_decay_430
+    # new best test_20_esp_decay_835
+    algo.restore(os.path.join(os.getcwd(), 'trained', 'test_19_exp_decay_835'))
 
 
-    # algo.config['num_rollout_workers'] = 1
+    algo.config['num_rollout_workers'] = 1
     
     for iteration in range(stop['training_iteration']):    #loop over training iterations
         result = algo.train()    #take a training step
