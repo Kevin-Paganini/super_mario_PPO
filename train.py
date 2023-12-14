@@ -147,7 +147,7 @@ class SuperMarioGym(gym.Env):
         
         # Calculating Reward
         # Need something to get it to actually move to the right
-        reward += 0.75 * (self.mario.level_progress - self.previous_max_progress) + (0.25 * self.mario.score) + (self.mario.lives_left * 100) + (15 * self.mario.time_left) # where mario starts
+        reward = 0.75 * (self.mario.level_progress - self.previous_max_progress) + (0.25 * self.mario.score) + (self.mario.lives_left * 100) + (15 * self.mario.time_left) # where mario starts
         
         # If mario did not get further in the level
         # print(f'Current progress: {self.mario.level_progress}, former max: {self.previous_max_progress}')
@@ -156,8 +156,7 @@ class SuperMarioGym(gym.Env):
         else:
             self.beat_previous_progress.append(True)
             self.previous_max_progress = self.mario.level_progress
-            
-            
+
         # How many ticks in a row has it not made progress?
         count_false = 0
         for value in reversed(self.beat_previous_progress):
@@ -256,7 +255,7 @@ def train():
     #new best test_18_lev_prog_275
     # new best test_19_exp_decay_430
     # new best test_20_esp_decay_835
-    algo.restore(os.path.join(os.getcwd(), 'trained', 'test_19_exp_decay_835'))
+    algo.restore(os.path.join(os.getcwd(), 'trained', 'test_19_exp_decay_2000'))
 
 
     algo.config['num_rollout_workers'] = 1
